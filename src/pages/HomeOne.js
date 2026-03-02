@@ -12,6 +12,8 @@ import CtaOne from "../components/Cta/CtaOne";
 import FooterOne from "../components/Layout/Footer/FooterOne";
 import MobileHeader from "../components/Layout/Header/DemoHeader/DemoHeaderMobile";
 import PageLayout from "../components/Layout/PageLayout";
+import ContactSection from "../components/ContactSection";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 export default function HomeOne() {
   return (
@@ -27,6 +29,11 @@ export default function HomeOne() {
       <TestimonialOne />
       <LatestBlogOne />
       <CtaOne />
+      <WhyChooseUs />
+      
+      {/* ফুটারের ঠিক উপরে নতুন Contact Section যোগ করা হলো */}
+      <ContactSection />
+      
       <FooterOne />
     </PageLayout>
   );

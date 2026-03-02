@@ -13,9 +13,9 @@ export default function FooterOne() {
               <div>
                 <Link to="/">
                   <img 
-                    src="/assets/images/ace-logo.png" 
+                    src="/assets/images/ace-logo.svg"  
                     alt="ACE Digital Solutions" 
-                    className="h-16 w-auto object-contain" 
+                    className="h-[200px] w-auto object-contain" 
                   />
                 </Link>
               </div>
@@ -101,7 +101,7 @@ export default function FooterOne() {
                       <Link to="/">Home</Link>
                     </li>
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
-                      <Link to="/about">Meet the Founder</Link>
+                      <Link to="/founder">Meet the Founder</Link> {/* Updated from /Founder to /founder for consistency */}
                     </li>
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
                       <Link to="/services">All Services</Link>
@@ -134,12 +134,13 @@ export default function FooterOne() {
                   </div>
 
                   <Link to="#">
-                    <div className="inline-flex py-3 px-8 home-two-btn-bg group bg-purple border-purple rounded-full w-full justify-center mt-2 hover:bg-main-black hover:border-main-black transition-all duration-300">
-                      <span className="relative z-10 text-base font-semibold text-white transition-all duration-300 font-inter">
+                    {/* Fixed Subscribe Button */}
+                    <div className="transition-all duration-500 home-two-btn-white-rev group before:bg-white after:bg-white border border-purple bg-purple hover:border-purple rounded-full w-full justify-center px-8 py-3 flex items-center gap-2 mt-2">
+                      <span className="relative z-10 text-base font-semibold text-white transition-all duration-300 group-hover:text-purple font-inter py-0.5">
                         Subscribe
                       </span>
                       <svg
-                        className="relative z-10 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                        className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
                         width="7"
                         height="12"
                         viewBox="0 0 7 12"
@@ -147,8 +148,8 @@ export default function FooterOne() {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
+                          className="transition-all duration-300 group-hover:stroke-purple stroke-white"
                           d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
-                          stroke="white"
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -197,14 +198,20 @@ export default function FooterOne() {
               </div>
 
               <ul className="items-center hidden md:space-x-6 md:flex">
-                <li className="font-medium hover:text-purple hover:underline common-transition text-paragraph cursor-pointer">
-                  Privacy Policy
-                </li>
-                <li className="font-medium text-paragraph">|</li>
-                <li className="font-medium hover:text-purple hover:underline common-transition text-paragraph cursor-pointer">
-                  Terms & Conditions
-                </li>
-              </ul>
+  <li className="font-medium hover:text-purple hover:underline common-transition text-paragraph cursor-pointer">
+    <Link to="/privacy-policy">Privacy Policy</Link>
+  </li>
+  <li className="font-medium text-paragraph">|</li>
+  <li className="font-medium hover:text-purple hover:underline common-transition text-paragraph cursor-pointer">
+    <Link to="/terms">Terms & Conditions</Link> 
+  </li>
+  <li className="font-medium text-paragraph">|</li>
+  
+  {/* নতুন Refund Policy লিংক */}
+  <li className="font-medium hover:text-purple hover:underline common-transition text-paragraph cursor-pointer">
+    <Link to="/refund-policy">Refund Policy</Link> 
+  </li>
+</ul>
             </div>
           </div>
         </div>

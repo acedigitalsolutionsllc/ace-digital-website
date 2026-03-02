@@ -99,13 +99,15 @@ export default function HeroOne() {
                 </p>
               </div>
               <div className="flex space-x-[30px] items-center pointer-events-auto">
+                
+                {/* --- Start Scaling Button Fixed --- */}
                 <Link to="/contact">
-                  <div className="py-3 home-two-btn-bg group bg-purple border-blue-seo">
-                    <span className="relative z-10 text-base font-semibold text-white transition-all duration-300 group-hover:text-purple font-inter">
+                  <div className="transition-all duration-500 home-two-btn-white-rev group before:bg-white after:bg-white border border-purple bg-purple hover:border-purple rounded-full px-8 py-3 flex items-center gap-2">
+                    <span className="relative z-10 text-base font-semibold text-white transition-all duration-300 group-hover:text-purple font-inter py-0.5">
                       Start Scaling
                     </span>
                     <svg
-                      className="relative z-10"
+                      className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
                       width="7"
                       height="12"
                       viewBox="0 0 7 12"
@@ -113,16 +115,16 @@ export default function HeroOne() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        className="transition-all duration-300 group-hover:stroke-blue-seo"
+                        className="transition-all duration-300 group-hover:stroke-purple stroke-white"
                         d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
-                        stroke="white"
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                      ></path>
+                      />
                     </svg>
                   </div>
                 </Link>
+                {/* --- End Fixed Button --- */}
 
                 <Link to="/services">
                   <div className="flex items-center gap-2 group">
@@ -154,7 +156,7 @@ export default function HeroOne() {
                 {/* */}
                 <div className="relative bottom-0 left-0 z-10 w-full xl:absolute">
                   <div className="flex justify-center w-full">
-                    {/* এখানে আপনার জেনারেট করা জোসেফের ছবিটি বসানো হয়েছে */}
+                    {/* এখানে আপনার জেনারেট করা জোসেফের ছবিটি বসানো হয়েছে */}
                     <img src="/assets/images/joe-hero.png" alt="Joseph Montemorano" />
                   </div>
                 </div>

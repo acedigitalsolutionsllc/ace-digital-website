@@ -7,20 +7,30 @@ export default function AboutCompany() {
         <div className="grid grid-cols-6 gap-10 lg:grid-cols-12 lg:gap-0 h-fit">
           <div className="col-span-6 lg:pr-[87px] flex h-full items-center">
             <div className="">
+              
+              {/* Tag / Badge */}
               <div className="py-1.5 md:py-3 px-5 rounded-[30px] border-[1.2px] border-blue-seo/30 w-fit bg-blue-seo/10">
                 <h1 className="text-base font-medium leading-5 tracking-tight text-purple">
-                  About Company
+                  About ACE Digital Solutions
                 </h1>
               </div>
-              <h1 className="text-24 md:text-48 font-semibold text-main-black mt-2.5 md:mt-5">
-                Digital Transforming Brands, Elevating Reach Crafting Success
+
+              {/* Main Headline */}
+              <h1 className="text-24 md:text-48 font-semibold text-main-black mt-2.5 md:mt-5 leading-tight">
+                Pioneering the Future of Digital Marketing with AI & CGI.
               </h1>
-              <p className="mt-5 md:mt-10 text-paragraph">
-                Defined by digital dynamism, our digital marketing agency
-                emerges as a beacon of innovation and strategic prowess.
+
+              {/* Paragraph */}
+              <p className="mt-5 md:mt-10 text-paragraph leading-relaxed">
+                We are more than a marketing agency; we are architects of digital growth. Combining 10+ years of clinical precision with cutting-edge AI and CGI technology, we craft hyper-realistic digital avatars and high-converting campaigns that work for you 24/7.
               </p>
+
               <hr className="mt-10 border-purple/10" />
+
+              {/* Two Column Features */}
               <div className="w-full grid grid-cols-1 sm:grid-cols-2 mt-[50px] gap-8 md:gap-[70px]">
+                
+                {/* Feature 1 */}
                 <div data-aos="fade-left" className="grid-cols-1">
                   <svg
                     width="20"
@@ -41,12 +51,14 @@ export default function AboutCompany() {
                     />
                   </svg>
                   <h1 className="mt-4 font-semibold text-18 text-main-black">
-                    Expert Team Member
+                    AI Clone Avatars
                   </h1>
-                  <p className="mt-3 text-paragraph">
-                    An SEO Optimization agency is company that specializes
+                  <p className="mt-3 text-paragraph text-sm">
+                    Replicate your likeness and voice to scale your brand presence without the stress of constant filming.
                   </p>
                 </div>
+
+                {/* Feature 2 */}
                 <div
                   data-aos="fade-left"
                   data-aos-delay="100"
@@ -71,58 +83,44 @@ export default function AboutCompany() {
                     />
                   </svg>
                   <h1 className="mt-4 font-semibold text-18 text-main-black">
-                    Custom SEO Support
+                    High-Impact CGI
                   </h1>
-                  <p className="mt-3 text-paragraph">
-                    These agencies typically offer range of services aimed
+                  <p className="mt-3 text-paragraph text-sm">
+                    Stop the scroll with jaw-dropping, viral-worthy 3D visual ads tailored for maximum engagement.
                   </p>
                 </div>
               </div>
+
             </div>
           </div>
 
           <div className="relative flex flex-col items-center justify-end col-span-6 sm:flex-row">
+            
+            {/* Trusted Clients Badge */}
             <div className="flex items-center p-[7px] pl-5 bg-white rounded-[30px] sm:absolute left-10 top-[70px] z-10 shadow-style-one">
               <span className="text-sm font-semibold text-black font-inter">
                 Trusted Clients
               </span>
               <div className="relative flex cursor-pointer">
-                <img
-                  src="/assets/images/about/client1.webp"
-                  alt=""
-                  className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-4 hover:z-10"
-                />
-                <img
-                  src="/assets/images/about/client2.webp"
-                  alt=""
-                  className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-3 hover:z-10"
-                />
-                <img
-                  src="/assets/images/about/client3.webp"
-                  alt=""
-                  className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-2 hover:z-10"
-                />
-                <img
-                  src="/assets/images/about/client4.webp"
-                  alt=""
-                  className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-1 hover:z-10"
-                />
-                <img
-                  src="/assets/images/about/client5.webp"
-                  alt=""
-                  className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 hover:z-10"
-                />
+                <img src="/assets/images/about/client1.webp" alt="Client 1" className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-4 hover:z-10" />
+                <img src="/assets/images/about/client2.webp" alt="Client 2" className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-3 hover:z-10" />
+                <img src="/assets/images/about/client3.webp" alt="Client 3" className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-2 hover:z-10" />
+                <img src="/assets/images/about/client4.webp" alt="Client 4" className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-1 hover:z-10" />
+                <img src="/assets/images/about/client5.webp" alt="Client 5" className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 hover:z-10" />
               </div>
             </div>
+            
+            {/* Main Image */}
             <div>
               <img
-                src="/assets/images/about/hero-img.webp"
-                alt="img"
-                className=""
+                src="/assets/images/joe-About.png" // Updated to Joe's image (Ensure this image exists in public/assets/images/)
+                alt="Joseph Montemorano"
+                className="rounded-[20px] shadow-lg" // Added rounding and shadow for a premium look
               />
             </div>
 
-            <div className="bg-purple p-[30px] rounded-2xl sm:absolute z-20 bottom-8 w-[295px] left-8 mt-5 sm:mt-0 max-w-full">
+            {/* Floating Experience Card */}
+            <div className="bg-purple p-[30px] rounded-2xl sm:absolute z-20 bottom-8 w-[295px] left-8 mt-5 sm:mt-0 max-w-full shadow-lg">
               <img
                 src="/assets/images/home-five/hero/about-card-shape.webp"
                 alt=""
@@ -144,16 +142,16 @@ export default function AboutCompany() {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span className="text-sm leading-8 text-white">We have</span>
+                <span className="text-sm leading-8 text-white">We bring</span>
               </div>
               <h1
-                className="text-[27px] leading-[35px] text-white font-semibold tracking-tight max-w-[170px]"
+                className="text-[27px] leading-[35px] text-white font-semibold tracking-tight max-w-[200px]"
                 data-scroll-qs="scroll"
-                data-count-qs="25"
-                data-type-qs="+ Years of Experience"
+                data-count-qs="10"
+                data-type-qs="+ Years of Precision"
                 data-speed-qs="1000"
               >
-                25+ Years of Experience
+                10+ Years of Precision
               </h1>
             </div>
           </div>

@@ -32,13 +32,14 @@ export default function DemoHeaderOne() {
             
             <div className="flex 2xl:space-x-[100px] xl:space-x-10 justify-between items-center w-full xl:w-auto">
               
-              {/* 1. Logo Area (Made Larger) */}
+              {/* 1. Logo Area (লোগোটি বড় করা হয়েছে) */}
               <div>
                 <Link to="/" aria-label="logo">
                   <img 
-                    src="/assets/images/ace-logo.png" 
+                    src="/assets/images/ace-logo.svg" 
                     alt="ACE Digital Solutions" 
-                    className="h-16 w-auto object-contain" 
+                    // h-16 এর জায়গায় h-[80px] দেওয়া হয়েছে লোগোটি বড় দেখানোর জন্য
+                    className="h-[150px] w-auto object-contain" 
                   />
                 </Link>
               </div>
@@ -50,7 +51,7 @@ export default function DemoHeaderOne() {
                     <Link to="/">Home</Link>
                   </li>
                   <li className="font-semibold text-paragraph hover:underline hover:text-purple transition-all duration-300">
-                    <Link to="/about">Founder</Link>
+                    <Link to="/about">About Us</Link>
                   </li>
                   <li className="font-semibold text-paragraph hover:underline hover:text-purple transition-all duration-300">
                     <Link to="/services">Services</Link>
@@ -75,14 +76,14 @@ export default function DemoHeaderOne() {
                 </div>
               </a>
 
-              {/* Start Scaling Button (Hover Fixed) */}
+              {/* Start Scaling Button Fixed */}
               <Link to="/contact">
-                <div className="py-3 px-8 bg-purple rounded-full cursor-pointer hover:bg-main-black transition-all duration-300 flex items-center gap-2 group">
-                  <span className="relative z-10 text-base font-semibold text-white font-inter">
+                <div className="transition-all duration-500 home-two-btn-white-rev group before:bg-white after:bg-white border border-purple bg-purple hover:border-purple rounded-full px-8 py-3 flex items-center gap-2 cursor-pointer">
+                  <span className="relative z-10 text-base font-semibold text-white transition-all duration-300 group-hover:text-purple font-inter py-0.5">
                     Start Scaling
                   </span>
                   <svg
-                    className="relative z-10 transform group-hover:translate-x-1 transition-all duration-300"
+                    className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
                     width="7"
                     height="12"
                     viewBox="0 0 7 12"
@@ -90,15 +91,16 @@ export default function DemoHeaderOne() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
+                      className="transition-all duration-300 group-hover:stroke-purple stroke-white"
                       d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
-                      stroke="white"
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                    ></path>
+                    />
                   </svg>
                 </div>
               </Link>
+              {/* End Start Scaling Button Fixed */}
 
             </div>
           </div>
