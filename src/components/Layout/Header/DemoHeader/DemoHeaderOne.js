@@ -32,13 +32,12 @@ export default function DemoHeaderOne() {
             
             <div className="flex 2xl:space-x-[100px] xl:space-x-10 justify-between items-center w-full xl:w-auto">
               
-              {/* 1. Logo Area (লোগোটি বড় করা হয়েছে) */}
+              {/* 1. Logo Area */}
               <div>
                 <Link to="/" aria-label="logo">
                   <img 
                     src="/assets/images/ace-logo.svg" 
                     alt="ACE Digital Solutions" 
-                    // h-16 এর জায়গায় h-[80px] দেওয়া হয়েছে লোগোটি বড় দেখানোর জন্য
                     className="h-[150px] w-auto object-contain" 
                   />
                 </Link>
@@ -53,9 +52,102 @@ export default function DemoHeaderOne() {
                   <li className="font-semibold text-paragraph hover:underline hover:text-purple transition-all duration-300">
                     <Link to="/about">About Us</Link>
                   </li>
-                  <li className="font-semibold text-paragraph hover:underline hover:text-purple transition-all duration-300">
-                    <Link to="/services">Services</Link>
+
+                  {/* --- Our Works Dropdown Menu --- */}
+                  <li className="relative group font-semibold text-paragraph transition-all duration-300 cursor-pointer h-[95px] flex items-center">
+                    <div className="flex items-center gap-1 hover:text-purple">
+                      Our Works
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="mt-0.5 group-hover:rotate-180 transition-transform duration-300"><path d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    
+                    <ul className="absolute top-[80px] left-0 w-[260px] bg-white border border-[#e7e3fa] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col py-3">
+                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "AI Digital Twins & Spokespersons" }} className="block w-full text-main-black hover:text-purple text-sm">AI Digital Twins & Spokespersons</Link>
+                      </li>
+                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "Shorts/Reels" }} className="block w-full text-main-black hover:text-purple text-sm">Shorts/Reels</Link>
+                      </li>
+                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "Promo Video" }} className="block w-full text-main-black hover:text-purple text-sm">Promo Video</Link>
+                      </li>
+                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "Banner Ads" }} className="block w-full text-main-black hover:text-purple text-sm">Banner Ads</Link>
+                      </li>
+                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "CGI Advertising" }} className="block w-full text-main-black hover:text-purple text-sm">CGI Advertising</Link>
+                      </li>
+                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "Thumbnail" }} className="block w-full text-main-black hover:text-purple text-sm">Thumbnail</Link>
+                      </li>
+                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors border-t border-[#e7e3fa] mt-1 pt-2">
+                        <Link to="/" state={{ category: "All" }} className="block w-full text-purple font-bold text-sm">View All Projects</Link>
+                      </li>
+                    </ul>
                   </li>
+                  {/* --- End Our Works Dropdown --- */}
+
+                  {/* --- Services MEGA MENU (New) --- */}
+                  <li className="relative group font-semibold text-paragraph transition-all duration-300 h-[95px] flex items-center">
+                    <div className="flex items-center gap-1 hover:text-purple cursor-pointer">
+                      Services
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="mt-0.5 group-hover:rotate-180 transition-transform duration-300"><path d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+
+                    {/* Mega Menu Dropdown Box */}
+                    <div className="absolute top-[80px] left-1/2 transform -translate-x-1/2 w-[850px] bg-white border border-[#e7e3fa] rounded-[24px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8 cursor-default">
+                      <div className="grid grid-cols-3 gap-8">
+                        
+                        {/* Column 1: Video Editing */}
+                        <div className="flex flex-col">
+                          <div className="flex items-center justify-between mb-5 pb-4 border-b border-[#e7e3fa]">
+                            <h3 className="text-[17px] font-bold text-main-black">Video Editing</h3>
+                            <div className="w-8 h-8 rounded-full bg-purple text-white flex items-center justify-center shadow-sm">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                          </div>
+                          <ul className="space-y-3.5">
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Podcast Video Editing</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Short-Form & Reels Editing</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Talking Head Video Editing</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">SaaS Editing Service</Link></li>
+                          </ul>
+                        </div>
+
+                        {/* Column 2: Video Creation */}
+                        <div className="flex flex-col border-l border-[#e7e3fa] pl-8">
+                          <div className="flex items-center justify-between mb-5 pb-4 border-b border-[#e7e3fa]">
+                            <h3 className="text-[17px] font-bold text-main-black">Video Creation</h3>
+                            <div className="w-8 h-8 rounded-full bg-purple text-white flex items-center justify-center shadow-sm">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                          </div>
+                          <ul className="space-y-3.5">
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Promo Video Editing</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Promotional Video</Link></li>
+                          </ul>
+                        </div>
+
+                        {/* Column 3: Design */}
+                        <div className="flex flex-col border-l border-[#e7e3fa] pl-8">
+                          <div className="flex items-center justify-between mb-5 pb-4 border-b border-[#e7e3fa]">
+                            <h3 className="text-[17px] font-bold text-main-black">Design</h3>
+                            <div className="w-8 h-8 rounded-full bg-purple text-white flex items-center justify-center shadow-sm">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                          </div>
+                          <ul className="space-y-3.5">
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Graphics Design</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Logo Design</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Branding</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">UI/UX</Link></li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+                  </li>
+                  {/* --- End Services MEGA MENU --- */}
+
                   <li className="font-semibold text-paragraph hover:underline hover:text-purple transition-all duration-300">
                     <Link to="/pricing">Pricing</Link>
                   </li>
@@ -70,11 +162,11 @@ export default function DemoHeaderOne() {
             <div className="xl:flex hidden space-x-[30px] items-center">
               
               {/* Client Login Link */}
-              <a href="#">
+              <Link to="#">
                 <div className="flex space-x-1.5 items-center hover:text-purple transition-all duration-300">
                   <span className="font-semibold text-main-black">Client Login</span>
                 </div>
-              </a>
+              </Link>
 
               {/* Start Scaling Button Fixed */}
               <Link to="/contact">

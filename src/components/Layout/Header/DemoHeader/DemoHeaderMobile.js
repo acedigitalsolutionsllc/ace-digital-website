@@ -1,22 +1,54 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-// ക്ലീൻ করা মেন্যু ডাটা (ডেক্সটপের সাথে মিল রেখে)
+// --- আপডেট করা মেনু ডাটা (সাবমেনু সহ) ---
 const menuData = [
   { title: "Home", href: "/" },
-  { title: "Founder", href: "/about" },
-  { title: "Services", href: "/services" },
+  { title: "About Us", href: "/about" },
+  {
+    title: "Our Works",
+    subItems: [
+      { title: "AI Digital Twins & Spokespersons", href: "/", state: { category: "AI Digital Twins & Spokespersons" } },
+      { title: "Shorts/Reels", href: "/", state: { category: "Shorts/Reels" } },
+      { title: "Promo Video", href: "/", state: { category: "Promo Video" } },
+      { title: "Banner Ads", href: "/", state: { category: "Banner Ads" } },
+      { title: "CGI Advertising", href: "/", state: { category: "CGI Advertising" } },
+      { title: "Thumbnail", href: "/", state: { category: "Thumbnail" } },
+      { title: "View All Projects", href: "/", state: { category: "All" } },
+    ],
+  },
+  {
+    title: "Services",
+    subItems: [
+      { title: "Podcast Video Editing", href: "/services" },
+      { title: "Short-Form & Reels Editing", href: "/services" },
+      { title: "Talking Head Video Editing", href: "/services" },
+      { title: "SaaS Editing Service", href: "/services" },
+      { title: "Promo Video Editing", href: "/services" },
+      { title: "Promotional Video", href: "/services" },
+      { title: "Graphics Design", href: "/services" },
+      { title: "Logo Design", href: "/services" },
+      { title: "Branding", href: "/services" },
+      { title: "UI/UX", href: "/services" },
+    ],
+  },
   { title: "Pricing", href: "/pricing" },
   { title: "Contact", href: "/contact" },
 ];
 
 const MobileHeader = () => {
   const [isNavActive, setIsNavActive] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null); // সাবমেনু খোলার স্টেট
   const navRef = useRef(null);
   const overlayRef = useRef(null);
 
   const toggleNav = () => {
     setIsNavActive((prev) => !prev);
+  };
+
+  // সাবমেনু টগল করার ফাংশন
+  const toggleDropdown = (title) => {
+    setOpenDropdown(openDropdown === title ? null : title);
   };
 
   // ওভারলেতে ক্লিক করলে মেন্যু বন্ধ হবে
@@ -40,6 +72,7 @@ const MobileHeader = () => {
   useEffect(() => {
     const handleHashChange = () => {
       setIsNavActive(false);
+      setOpenDropdown(null); // পেজ চেঞ্জ হলে সাবমেনুও বন্ধ হবে
     };
 
     window.addEventListener("hashchange", handleHashChange);
@@ -59,7 +92,7 @@ const MobileHeader = () => {
           <img 
             src="/assets/images/ace-logo.svg" 
             alt="ACE Digital Solutions" 
-            className="h-[150px] w-auto object-contain" 
+            className="h-[100px] w-auto object-contain" 
           />
         </Link>
 
@@ -106,23 +139,70 @@ const MobileHeader = () => {
 
         {/* Sidebar Menu */}
         <div
-          className={`fixed z-50 w-[80%] max-w-[320px] h-screen overflow-y-scroll transition-all duration-300 bg-white top-0 pt-24 ${
+          className={`fixed z-50 w-[85%] max-w-[340px] h-screen overflow-y-scroll transition-all duration-300 bg-white top-0 pt-24 pb-10 shadow-2xl ${
             isNavActive ? "left-0" : "-left-full"
           }`}
           ref={navRef}
         >
           {/* Links */}
           <div className="flex flex-col pl-6">
-            <ul className="flex flex-col gap-6 text-lg font-semibold text-main-black font-inter">
+            <ul className="flex flex-col gap-2 text-lg font-semibold text-main-black font-inter">
               {menuData.map((menuItem, index) => (
-                <li key={index} className="group border-b border-gray-100 pb-3 w-[90%]">
-                  <Link
-                    className="relative block w-full hover:text-purple transition-colors duration-300"
-                    to={menuItem.href}
-                    onClick={() => setIsNavActive(false)}
-                  >
-                    {menuItem.title}
-                  </Link>
+                <li key={index} className="w-[90%]">
+                  
+                  {/* যদি সাবমেনু থাকে (Accordion Style) */}
+                  {menuItem.subItems ? (
+                    <div className="border-b border-gray-100 pb-3 mt-3">
+                      <div
+                        className="flex justify-between items-center w-full cursor-pointer hover:text-purple transition-colors duration-300"
+                        onClick={() => toggleDropdown(menuItem.title)}
+                      >
+                        <span>{menuItem.title}</span>
+                        {/* Dropdown Arrow */}
+                        <svg 
+                          width="14" 
+                          height="14" 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="3"
+                          className={`transition-transform duration-300 text-purple ${openDropdown === menuItem.title ? "rotate-180" : ""}`}
+                        >
+                          <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                      </div>
+                      
+                      {/* Sub-Items List */}
+                      <ul className={`flex flex-col gap-4 pl-4 mt-4 border-l-[3px] border-purple/20 transition-all duration-300 overflow-hidden ${openDropdown === menuItem.title ? "block" : "hidden"}`}>
+                        {menuItem.subItems.map((sub, i) => (
+                          <li key={i}>
+                            <Link
+                              to={sub.href}
+                              state={sub.state}
+                              className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors"
+                              onClick={() => {
+                                setIsNavActive(false);
+                                setOpenDropdown(null);
+                              }}
+                            >
+                              {sub.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    /* যদি সাবমেনু না থাকে (Normal Link) */
+                    <div className="border-b border-gray-100 pb-3 mt-3">
+                      <Link
+                        className="block w-full hover:text-purple transition-colors duration-300"
+                        to={menuItem.href}
+                        onClick={() => setIsNavActive(false)}
+                      >
+                        {menuItem.title}
+                      </Link>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>

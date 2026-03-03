@@ -64,7 +64,7 @@ export default function FooterOne() {
                 </div>
               </div>
 
-              {/* Services */}
+              {/* Updated Services */}
               <div className="xl:col-span-3">
                 <div className="w-full">
                   <p className="text-main-black text-18 font-semibold mb-[30px]">
@@ -72,39 +72,42 @@ export default function FooterOne() {
                   </p>
                   <ul className="flex flex-col space-y-3">
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
-                      <Link to="/services">AI Clone Avatars</Link>
+                      <Link to="/services">Podcast Video Editing</Link>
                     </li>
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
-                      <Link to="/services">CGI Advertising</Link>
+                      <Link to="/services">Short-Form & Reels</Link>
                     </li>
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
-                      <Link to="/services">Pro Video Editing</Link>
+                      <Link to="/services">Promo Video Creation</Link>
                     </li>
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
-                      <Link to="/services">Website Development</Link>
+                      <Link to="/services">SaaS Editing Service</Link>
                     </li>
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
-                      <Link to="/services">Social Media Management</Link>
+                      <Link to="/services">Graphics & Branding</Link>
+                    </li>
+                    <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
+                      <Link to="/services">UI/UX Design</Link>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              {/* Quick Links */}
+              {/* Quick Links / Company */}
               <div className="xl:col-span-3">
                 <div className="w-full">
                   <p className="text-main-black text-18 font-semibold mb-[30px]">
-                    Company
+                    Quick Links
                   </p>
                   <ul className="flex flex-col space-y-3">
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
                       <Link to="/">Home</Link>
                     </li>
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
-                      <Link to="/founder">Meet the Founder</Link> {/* Updated from /Founder to /founder for consistency */}
+                      <Link to="/founder">Meet the Founder</Link>
                     </li>
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
-                      <Link to="/services">All Services</Link>
+                      <Link to="/" state={{ category: "All" }}>Our Works (Portfolio)</Link>
                     </li>
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
                       <Link to="/pricing">Pricing Plans</Link>
@@ -198,20 +201,18 @@ export default function FooterOne() {
               </div>
 
               <ul className="items-center hidden md:space-x-6 md:flex">
-  <li className="font-medium hover:text-purple hover:underline common-transition text-paragraph cursor-pointer">
-    <Link to="/privacy-policy">Privacy Policy</Link>
-  </li>
-  <li className="font-medium text-paragraph">|</li>
-  <li className="font-medium hover:text-purple hover:underline common-transition text-paragraph cursor-pointer">
-    <Link to="/terms">Terms & Conditions</Link> 
-  </li>
-  <li className="font-medium text-paragraph">|</li>
-  
-  {/* নতুন Refund Policy লিংক */}
-  <li className="font-medium hover:text-purple hover:underline common-transition text-paragraph cursor-pointer">
-    <Link to="/refund-policy">Refund Policy</Link> 
-  </li>
-</ul>
+                <li className="font-medium hover:text-purple hover:underline common-transition text-paragraph cursor-pointer">
+                  <Link to="/privacy-policy">Privacy Policy</Link>
+                </li>
+                <li className="font-medium text-paragraph">|</li>
+                <li className="font-medium hover:text-purple hover:underline common-transition text-paragraph cursor-pointer">
+                  <Link to="/terms">Terms & Conditions</Link> 
+                </li>
+                <li className="font-medium text-paragraph">|</li>
+                <li className="font-medium hover:text-purple hover:underline common-transition text-paragraph cursor-pointer">
+                  <Link to="/refund-policy">Refund Policy</Link> 
+                </li>
+              </ul>
             </div>
           </div>
         </div>
