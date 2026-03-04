@@ -26,6 +26,8 @@ import TermsConditions from "./pages/TermsConditions";
 import RefundPolicy from "./pages/RefundPolicy";
 import Pricing from "./pages/Pricing";
 import SampleConsent from "./pages/SampleConsent";
+import ReferralProgram from "./pages/ReferralProgram";
+import SubmitAssets from "./pages/SubmitAssets";
 import Notfound from "./pages/Notfound";
 
 // --- Scroll To Top Component ---
@@ -75,6 +77,8 @@ export default function App() {
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/sample-consent" element={<SampleConsent />} />
+        <Route path="/referral-program" element={<ReferralProgram />} />
+        <Route path="/submit-assets" element={<SubmitAssets />} />
         
         {/* 404 Not Found Page (Must be at the very bottom) */}
         <Route path="*" element={<Notfound />} />

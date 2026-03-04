@@ -100,11 +100,11 @@ export default function HeroOne() {
               </div>
               <div className="flex space-x-[30px] items-center pointer-events-auto">
                 
-                {/* --- Start Scaling Button Fixed --- */}
-                <Link to="/contact">
+                {/* --- Updated Button Link (submit-assets) --- */}
+                <Link to="/submit-assets">
                   <div className="transition-all duration-500 home-two-btn-white-rev group before:bg-white after:bg-white border border-purple bg-purple hover:border-purple rounded-full px-8 py-3 flex items-center gap-2">
                     <span className="relative z-10 text-base font-semibold text-white transition-all duration-300 group-hover:text-purple font-inter py-0.5">
-                      Start Scaling
+                      Start a project
                     </span>
                     <svg
                       className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
@@ -124,7 +124,7 @@ export default function HeroOne() {
                     </svg>
                   </div>
                 </Link>
-                {/* --- End Fixed Button --- */}
+                {/* --- End Updated Button --- */}
 
                 <Link to="/services">
                   <div className="flex items-center gap-2 group">
