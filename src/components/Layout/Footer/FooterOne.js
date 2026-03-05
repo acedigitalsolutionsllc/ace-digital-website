@@ -118,6 +118,9 @@ export default function FooterOne() {
                     <li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
   <Link to="/referral-program">Referral Program</Link>
 </li>
+<li className="font-medium hover:text-purple hover:-translate-y-0.5 common-transition text-paragraph">
+  <Link to="/cart">Build Your Package</Link>
+</li>
                   </ul>
                 </div>
               </div>
