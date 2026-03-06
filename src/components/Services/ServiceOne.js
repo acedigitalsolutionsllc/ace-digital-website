@@ -9,7 +9,8 @@ export default function ServiceOne() {
         <div className="relative z-10 mx-auto theme-container">
           <div className="w-full xl:py-[130px] py-[60px] xl:px-[80px] md:px-10 px-5 bg-main-gray rounded-[10px] border border-[#e7e3fa]">
             <div className="flex flex-col items-center">
-              <span className="text-purple font-medium px-5 py-3 border border-[#e7e3fa] leading-none rounded-full inline-block mb-5 bg-white">
+              {/* Changed Tag: Text Brand Green and Border Brand Green */}
+              <span className="!text-[#6db305] font-medium px-5 py-3 border !border-[#6db305]/20 leading-none rounded-full inline-block mb-5 bg-[#6db305]/10">
                 Explore Services
               </span>
               <h2 className="md:text-48 text-34 font-semibold text-main-black mb-[50px] text-center lg:w-[685px] w-full">
@@ -17,11 +18,14 @@ export default function ServiceOne() {
               </h2>
             </div>
             <div className="w-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-[70px] gap-8">
+              
+              {/* Service Box 1 */}
               <div
                 data-aos="zoom-in-left"
-                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-common group border border-transparent hover:border-purple common-transition"
+                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-[0_0_25px_rgba(109,179,5,0.15)] group border border-transparent hover:border-[#6db305] common-transition"
               >
-                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#e7e3fa] group-hover:bg-purple common-transition text-purple group-hover:text-white">
+                {/* Icon Background & Text Color Changed */}
+                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#094a66]/10 group-hover:bg-[#094a66] group-hover:shadow-[0_0_15px_rgba(109,179,5,0.4)] common-transition text-[#094a66] group-hover:text-white">
                   <span>
                     <svg
                       width="30"
@@ -49,12 +53,15 @@ export default function ServiceOne() {
                   </p>
                 </div>
               </div>
+
+              {/* Service Box 2 */}
               <div
                 data-aos="zoom-in-left"
                 data-aos-delay="100"
-                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-common group border border-transparent hover:border-purple common-transition"
+                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-[0_0_25px_rgba(109,179,5,0.15)] group border border-transparent hover:border-[#6db305] common-transition"
               >
-                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#e7e3fa] group-hover:bg-purple common-transition text-purple group-hover:text-white">
+                {/* Icon Background & Text Color Changed */}
+                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#094a66]/10 group-hover:bg-[#094a66] group-hover:shadow-[0_0_15px_rgba(109,179,5,0.4)] common-transition text-[#094a66] group-hover:text-white">
                   <span>
                     <svg
                       className="fill-current"
@@ -78,12 +85,15 @@ export default function ServiceOne() {
                   </p>
                 </div>
               </div>
+
+              {/* Service Box 3 */}
               <div
                 data-aos="zoom-in-left"
                 data-aos-delay="200"
-                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-common group border border-transparent hover:border-purple common-transition"
+                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-[0_0_25px_rgba(109,179,5,0.15)] group border border-transparent hover:border-[#6db305] common-transition"
               >
-                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#e7e3fa] group-hover:bg-purple common-transition text-purple group-hover:text-white">
+                {/* Icon Background & Text Color Changed */}
+                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#094a66]/10 group-hover:bg-[#094a66] group-hover:shadow-[0_0_15px_rgba(109,179,5,0.4)] common-transition text-[#094a66] group-hover:text-white">
                   <span>
                     <svg
                       width="30"
@@ -153,12 +163,15 @@ export default function ServiceOne() {
                   </p>
                 </div>
               </div>
+
+              {/* Service Box 4 */}
               <div
                 data-aos="zoom-in-left"
                 data-aos-delay="300"
-                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-common group border border-transparent hover:border-purple common-transition"
+                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-[0_0_25px_rgba(109,179,5,0.15)] group border border-transparent hover:border-[#6db305] common-transition"
               >
-                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#e7e3fa] group-hover:bg-purple common-transition text-purple group-hover:text-white">
+                {/* Icon Background & Text Color Changed */}
+                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#094a66]/10 group-hover:bg-[#094a66] group-hover:shadow-[0_0_15px_rgba(109,179,5,0.4)] common-transition text-[#094a66] group-hover:text-white">
                   <span>
                     <svg
                       width="30"
@@ -187,12 +200,15 @@ export default function ServiceOne() {
                   </p>
                 </div>
               </div>
+
+              {/* Service Box 5 */}
               <div
                 data-aos="zoom-in-left"
                 data-aos-delay="400"
-                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-common group border border-transparent hover:border-purple common-transition"
+                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-[0_0_25px_rgba(109,179,5,0.15)] group border border-transparent hover:border-[#6db305] common-transition"
               >
-                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#e7e3fa] group-hover:bg-purple common-transition text-purple group-hover:text-white">
+                {/* Icon Background & Text Color Changed */}
+                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#094a66]/10 group-hover:bg-[#094a66] group-hover:shadow-[0_0_15px_rgba(109,179,5,0.4)] common-transition text-[#094a66] group-hover:text-white">
                   <span>
                     <svg
                       width="28"
@@ -220,12 +236,15 @@ export default function ServiceOne() {
                   </p>
                 </div>
               </div>
+
+              {/* Service Box 6 */}
               <div
                 data-aos="zoom-in-left"
                 data-aos-delay="500"
-                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-common group border border-transparent hover:border-purple common-transition"
+                className="flex flex-col space-y-[30px] justify-between items-center rounded-[10px] bg-white px-8 py-10 hover:shadow-[0_0_25px_rgba(109,179,5,0.15)] group border border-transparent hover:border-[#6db305] common-transition"
               >
-                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#e7e3fa] group-hover:bg-purple common-transition text-purple group-hover:text-white">
+                {/* Icon Background & Text Color Changed */}
+                <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full bg-[#094a66]/10 group-hover:bg-[#094a66] group-hover:shadow-[0_0_15px_rgba(109,179,5,0.4)] common-transition text-[#094a66] group-hover:text-white">
                   <span>
                     <svg
                       width="30"
@@ -254,9 +273,12 @@ export default function ServiceOne() {
                   </p>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>
+        
+        {/* Original Lottie Animations Kept Intact */}
         <div className="absolute flex justify-between top-1/3">
           <Lottie animationData={lineAnimation} loop={true} />
           <Lottie
@@ -265,6 +287,7 @@ export default function ServiceOne() {
             loop={true}
           />
         </div>
+        
       </div>
     </section>
   );

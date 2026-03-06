@@ -81,7 +81,8 @@ export default function HeroOne() {
                     </defs>
                   </svg>
                 </span>
-                <span className="text-sm font-semibold pointer-events-auto md:text-20 text-purple">
+                {/* Changed Text color to #094a66 */}
+                <span className="text-sm font-semibold pointer-events-auto md:text-20 text-[#094a66]">
                   Welcome to ACE Digital
                 </span>
               </div>
@@ -90,20 +91,23 @@ export default function HeroOne() {
                 In The
                 <span className="relative inline-block px-3 font-bold text-white uppercase ml-2">
                   <span className="relative z-10">Feed.</span>
-                  <span className="absolute top-0 left-0 block w-full h-full bg-gradient-to-r from-purple"></span>
+                  {/* Changed background gradient to #6db305 */}
+                  <span className="absolute top-0 left-0 block w-full h-full bg-gradient-to-r from-[#6db305] to-[#6db305]"></span>
                 </span>
               </h2>
-              <div className="px-6 py-[14px] bg-white border-l-2 border-blue-sass mb-[35px] pointer-events-auto xl:w-full md:w-[500px]">
+              {/* Changed border color to #094a66 */}
+              <div className="px-6 py-[14px] bg-white border-l-2 border-[#094a66] mb-[35px] pointer-events-auto xl:w-full md:w-[500px]">
                 <p className="text-ptwo text-paragraph">
                   Replace traditional, stressful video production with hyper-realistic AI Avatars and jaw-dropping CGI ads. Clone yourself and scale your business effortlessly 24/7.
                 </p>
               </div>
               <div className="flex space-x-[30px] items-center pointer-events-auto">
                 
-                {/* --- Updated Button Link (submit-assets) --- */}
+                {/* --- Updated Button Link (submit-assets) with Brand Colors & Glow --- */}
                 <Link to="/submit-assets">
-                  <div className="transition-all duration-500 home-two-btn-white-rev group before:bg-white after:bg-white border border-purple bg-purple hover:border-purple rounded-full px-8 py-3 flex items-center gap-2">
-                    <span className="relative z-10 text-base font-semibold text-white transition-all duration-300 group-hover:text-purple font-inter py-0.5">
+                  <div className="transition-all duration-500 home-two-btn-white-rev group before:bg-white after:bg-white border border-[#094a66] bg-[#094a66] hover:border-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.4)] rounded-full px-8 py-3 flex items-center gap-2">
+                    {/* Hover text color changed to #094a66 */}
+                    <span className="relative z-10 text-base font-semibold text-white transition-all duration-300 group-hover:text-[#094a66] font-inter py-0.5">
                       Start a project
                     </span>
                     <svg
@@ -114,8 +118,9 @@ export default function HeroOne() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
+                      {/* Hover stroke color changed to #094a66 */}
                       <path
-                        className="transition-all duration-300 group-hover:stroke-purple stroke-white"
+                        className="transition-all duration-300 group-hover:stroke-[#094a66] stroke-white"
                         d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
                         strokeWidth="1.5"
                         strokeLinecap="round"
@@ -128,7 +133,8 @@ export default function HeroOne() {
 
                 <Link to="/services">
                   <div className="flex items-center gap-2 group">
-                    <p className="mb-[1px] font-medium text-main-black leading-5 font-inter border-b border-main-black before:block before:pb-[1px] before:border-purple before:font-medium before:text-purple before:leading-5 before:font-inter before:border-b before:content-['Explore_Services'] before:absolute before:-bottom-[1px] before:transition-all before:duration-300 before:w-0 hover:before:w-full before:overflow-hidden before:h-[21px] relative">
+                    {/* Hover text and underline color changed to #094a66 */}
+                    <p className="mb-[1px] font-medium text-main-black leading-5 font-inter border-b border-main-black before:block before:pb-[1px] before:border-[#094a66] before:font-medium before:text-[#094a66] before:leading-5 before:font-inter before:border-b before:content-['Explore_Services'] before:absolute before:-bottom-[1px] before:transition-all before:duration-300 before:w-0 hover:before:w-full before:overflow-hidden before:h-[21px] relative">
                       Explore Services
                     </p>
                     <svg
@@ -138,8 +144,9 @@ export default function HeroOne() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
+                      {/* Hover stroke color changed to #094a66 */}
                       <path
-                        className="transition-all duration-300 delay-300 group-hover:stroke-purple"
+                        className="transition-all duration-300 delay-300 group-hover:stroke-[#094a66]"
                         d="M1.5 10L5.29289 6.20711C5.62623 5.87377 5.79289 5.70711 5.79289 5.5C5.79289 5.29289 5.62623 5.12623 5.29289 4.79289L1.5 1"
                         stroke="#101828"
                         strokeWidth="1.5"
@@ -167,23 +174,28 @@ export default function HeroOne() {
                     id="hero-mouse-move-anim"
                     className="relative z-10 w-full h-full pointer-events-auto"
                   >
+                    {/* Parallax Floating Items - Colors Changed to match your brand */}
                     <div data-depth="0.20" className="layer">
-                      <span className="inline-block xl:px-[30px] px-6 xl:py-2.5 py-1.5 bg-[#BA4AFF] 2xl:text-pone xl:text-sm lg:text-pone text-white rounded-br-none rounded-full">
+                      {/* Brand Blue */}
+                      <span className="inline-block xl:px-[30px] px-6 xl:py-2.5 py-1.5 bg-[#094a66] 2xl:text-pone xl:text-sm lg:text-pone text-white rounded-br-none rounded-full">
                         AI Avatar Clones
                       </span>
                     </div>
                     <div data-depth="0.30" className="layer">
-                      <span className="inline-block xl:px-[30px] px-6 xl:py-2.5 py-1.5 bg-purple 2xl:text-pone xl:text-sm lg:text-pone text-white rounded-full rounded-bl-none">
+                      {/* Brand Green */}
+                      <span className="inline-block xl:px-[30px] px-6 xl:py-2.5 py-1.5 bg-[#6db305] 2xl:text-pone xl:text-sm lg:text-pone text-white rounded-full rounded-bl-none">
                         CGI Advertising
                       </span>
                     </div>
                     <div data-depth="0.40" className="layer h-fit">
-                      <span className="inline-block xl:px-[30px] px-6 xl:py-2.5 py-1.5 bg-blue-sass 2xl:text-pone xl:text-sm lg:text-pone text-white rounded-br-none rounded-full h-fit">
+                      {/* Secondary Brand Color (if any) or staying with Orange for contrast */}
+                      <span className="inline-block xl:px-[30px] px-6 xl:py-2.5 py-1.5 bg-[#FF8C05] 2xl:text-pone xl:text-sm lg:text-pone text-white rounded-br-none rounded-full h-fit">
                         24/7 Automation
                       </span>
                     </div>
                     <div data-depth="0.50" className="layer h-fit">
-                      <span className="inline-block xl:px-[30px] px-6 xl:py-2.5 py-1.5 bg-[#FF8C05] 2xl:text-pone xl:text-sm lg:text-pone text-white rounded-full rounded-bl-none h-fit">
+                      {/* Deep Blue */}
+                      <span className="inline-block xl:px-[30px] px-6 xl:py-2.5 py-1.5 bg-[#094a66] 2xl:text-pone xl:text-sm lg:text-pone text-white rounded-full rounded-bl-none h-fit">
                         77k+ Reached
                       </span>
                     </div>

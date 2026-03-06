@@ -42,13 +42,11 @@ export default function SubmitAssets() {
 
     setStatus("sending");
 
-    // 💡 ম্যাজিক ট্রিক: আপনার Contact Us টেমপ্লেটের ভেতরেই সব ডেটা প্যাক করে পাঠানো হচ্ছে
     const templateParams = {
-      title: "New Client Assets Submitted!", // Email Subject-এ বসবে
+      title: "New Client Assets Submitted!", // Email Subject
       user_name: formData.clientName, 
       user_email: formData.clientEmail,
       interest: "Client Onboarding & Asset Submission",
-      // ফর্মের সব তথ্য সুন্দর করে সাজিয়ে message বক্সে পাঠানো হচ্ছে
       message: `
 🚀 NEW ASSET SUBMISSION RECEIVED 🚀
 
@@ -77,7 +75,7 @@ ${formData.projectNotes || "No additional notes provided."}
     emailjs
       .send(
         "service_pgb2duk",       // Service ID
-        "template_6gwu1kg",      // ⚠️ আপনার Contact Us Template ID
+        "template_6gwu1kg",      // Template ID
         templateParams,
         "WKtRNi6iZ_QylHBgl"      // Public Key
       )
@@ -104,11 +102,13 @@ ${formData.projectNotes || "No additional notes provided."}
 
       {/* --- Page Header --- */}
       <section className="relative w-full pt-[150px] pb-[80px] bg-main-gray overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-50">
-          <img src="/assets/images/home-one-hero-circle-shadow.svg" alt="" className="w-full object-cover" />
+        {/* Background glow changed to Brand Blue */}
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30">
+          <img src="/assets/images/home-one-hero-circle-shadow.svg" alt="" className="w-full object-cover filter hue-rotate-[180deg]" />
         </div>
         <div className="mx-auto theme-container relative z-10 text-center max-w-4xl">
-          <div className="inline-block px-5 py-1.5 mb-4 text-sm font-semibold text-purple bg-purple/10 border border-purple/20 rounded-full">
+          {/* Changed Tag: Text Brand Green and Border Brand Green with Glow format */}
+          <div className="inline-block px-5 py-1.5 mb-4 text-sm font-semibold !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 rounded-full">
             Client Onboarding
           </div>
           <h1 className="text-4xl md:text-[56px] font-bold text-main-black mb-4">Submit Your Assets</h1>
@@ -120,14 +120,15 @@ ${formData.projectNotes || "No additional notes provided."}
 
       {/* --- Form Section --- */}
       <section className="w-full py-[100px] bg-white relative overflow-hidden">
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple/5 rounded-full blur-[120px] pointer-events-none"></div>
+        {/* Inner glow changed to Brand Blue */}
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#094a66]/5 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div className="mx-auto theme-container max-w-4xl relative z-10">
           <div data-aos="fade-up" className="bg-white rounded-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-[#e7e3fa] p-8 md:p-14">
             
             {status === "success" ? (
               <div className="text-center py-16">
-                <div className="w-24 h-24 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 bg-green-100 text-[#6db305] rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_20px_rgba(109,179,5,0.2)]">
                   <svg width="48" height="48" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
                 </div>
                 <h3 className="text-3xl font-bold text-main-black mb-3">Assets Received Successfully!</h3>
@@ -135,7 +136,7 @@ ${formData.projectNotes || "No additional notes provided."}
                   Thank you for submitting your materials. Our creative team will review your files and begin working on your project immediately.
                 </p>
                 <Link to="/">
-                  <button className="px-8 py-3 bg-purple text-white font-bold rounded-full hover:bg-main-black transition-colors">Return to Home</button>
+                  <button className="px-8 py-3 bg-[#094a66] hover:bg-[#6db305] text-white font-bold rounded-full transition-all duration-300 hover:shadow-[0_0_15px_rgba(109,179,5,0.4)]">Return to Home</button>
                 </Link>
               </div>
             ) : (
@@ -144,21 +145,22 @@ ${formData.projectNotes || "No additional notes provided."}
                 {/* 1. Basic Info */}
                 <div>
                   <h4 className="font-bold text-xl text-main-black mb-6 flex items-center gap-2 border-b border-[#e7e3fa] pb-3">
-                    <span className="w-8 h-8 rounded-full bg-purple/10 flex items-center justify-center text-purple text-sm">1</span>
+                    {/* Number styling changed to Brand Blue */}
+                    <span className="w-8 h-8 rounded-full bg-[#094a66]/10 flex items-center justify-center text-[#094a66] text-sm font-black">1</span>
                     Your Information
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-bold text-main-black mb-2">Full Name *</label>
-                      <input type="text" name="clientName" value={formData.clientName} onChange={handleChange} required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-purple rounded-xl outline-none transition-all" placeholder="John Doe" />
+                      <input type="text" name="clientName" value={formData.clientName} onChange={handleChange} required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.1)] rounded-xl outline-none transition-all" placeholder="John Doe" />
                     </div>
                     <div>
                       <label className="block text-sm font-bold text-main-black mb-2">Email Address *</label>
-                      <input type="email" name="clientEmail" value={formData.clientEmail} onChange={handleChange} required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-purple rounded-xl outline-none transition-all" placeholder="john@example.com" />
+                      <input type="email" name="clientEmail" value={formData.clientEmail} onChange={handleChange} required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.1)] rounded-xl outline-none transition-all" placeholder="john@example.com" />
                     </div>
                     <div className="md:col-span-2">
                       <label className="block text-sm font-bold text-main-black mb-2">Company / Brand Name *</label>
-                      <input type="text" name="companyName" value={formData.companyName} onChange={handleChange} required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-purple rounded-xl outline-none transition-all" placeholder="Your Business LLC" />
+                      <input type="text" name="companyName" value={formData.companyName} onChange={handleChange} required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.1)] rounded-xl outline-none transition-all" placeholder="Your Business LLC" />
                     </div>
                   </div>
                 </div>
@@ -166,26 +168,26 @@ ${formData.projectNotes || "No additional notes provided."}
                 {/* 2. File Links & URLs */}
                 <div>
                   <h4 className="font-bold text-xl text-main-black mb-6 flex items-center gap-2 border-b border-[#e7e3fa] pb-3">
-                    <span className="w-8 h-8 rounded-full bg-purple/10 flex items-center justify-center text-purple text-sm">2</span>
+                    <span className="w-8 h-8 rounded-full bg-[#094a66]/10 flex items-center justify-center text-[#094a66] text-sm font-black">2</span>
                     Digital Assets & Links
                   </h4>
                   <div className="flex flex-col gap-6">
                     
-                    {/* Cloud Drive Link */}
-                    <div className="bg-purple/5 p-6 rounded-2xl border border-purple/20">
-                      <label className="block text-sm font-bold text-main-black mb-2">Project Files Link (Google Drive, Dropbox, WeTransfer) *</label>
+                    {/* Cloud Drive Link - Styled with Brand Blue background tint */}
+                    <div className="bg-[#094a66]/5 p-6 rounded-2xl border border-[#094a66]/20">
+                      <label className="block text-sm font-bold text-[#094a66] mb-2">Project Files Link (Google Drive, Dropbox, WeTransfer) *</label>
                       <p className="text-xs text-paragraph mb-3">Please upload your high-quality videos, logos, and raw photos to a cloud drive and paste the "Shareable Link" here. (Ensure access is set to "Anyone with the link").</p>
-                      <input type="url" name="assetLink" value={formData.assetLink} onChange={handleChange} required className="w-full h-[55px] px-5 bg-white border border-[#e7e3fa] focus:border-purple rounded-xl outline-none transition-all" placeholder="https://drive.google.com/drive/folders/..." />
+                      <input type="url" name="assetLink" value={formData.assetLink} onChange={handleChange} required className="w-full h-[55px] px-5 bg-white border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_15px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all" placeholder="https://drive.google.com/drive/folders/..." />
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-bold text-main-black mb-2">Website URL</label>
-                        <input type="url" name="websiteLink" value={formData.websiteLink} onChange={handleChange} className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-purple rounded-xl outline-none transition-all" placeholder="https://www.yourwebsite.com" />
+                        <input type="url" name="websiteLink" value={formData.websiteLink} onChange={handleChange} className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-[#6db305] rounded-xl outline-none transition-all" placeholder="https://www.yourwebsite.com" />
                       </div>
                       <div>
                         <label className="block text-sm font-bold text-main-black mb-2">Social Media Handles</label>
-                        <input type="text" name="socialLinks" value={formData.socialLinks} onChange={handleChange} className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-purple rounded-xl outline-none transition-all" placeholder="@yourbrand (IG, TikTok, FB)" />
+                        <input type="text" name="socialLinks" value={formData.socialLinks} onChange={handleChange} className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-[#6db305] rounded-xl outline-none transition-all" placeholder="@yourbrand (IG, TikTok, FB)" />
                       </div>
                     </div>
 
@@ -195,12 +197,12 @@ ${formData.projectNotes || "No additional notes provided."}
                 {/* 3. Instructions */}
                 <div>
                   <h4 className="font-bold text-xl text-main-black mb-6 flex items-center gap-2 border-b border-[#e7e3fa] pb-3">
-                    <span className="w-8 h-8 rounded-full bg-purple/10 flex items-center justify-center text-purple text-sm">3</span>
+                    <span className="w-8 h-8 rounded-full bg-[#094a66]/10 flex items-center justify-center text-[#094a66] text-sm font-black">3</span>
                     Project Notes
                   </h4>
                   <div>
                     <label className="block text-sm font-bold text-main-black mb-2">Additional Instructions or Ideas</label>
-                    <textarea name="projectNotes" value={formData.projectNotes} onChange={handleChange} rows="4" className="w-full p-5 bg-main-gray border border-[#e7e3fa] focus:border-purple rounded-xl outline-none transition-all resize-none" placeholder="Tell us about the vibe, specific colors, or anything we should focus on..."></textarea>
+                    <textarea name="projectNotes" value={formData.projectNotes} onChange={handleChange} rows="4" className="w-full p-5 bg-main-gray border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.1)] rounded-xl outline-none transition-all resize-none" placeholder="Tell us about the vibe, specific colors, or anything we should focus on..."></textarea>
                   </div>
                 </div>
 
@@ -211,13 +213,14 @@ ${formData.projectNotes || "No additional notes provided."}
                     Asset Submission Waiver & Disclaimer
                   </h4>
                   <div className="flex items-start gap-4 cursor-pointer mt-4">
+                    {/* Checkbox color changed to Brand Green */}
                     <input 
                       type="checkbox" 
                       id="waiver" 
                       required
                       checked={isChecked}
                       onChange={(e) => setIsChecked(e.target.checked)}
-                      className="w-6 h-6 mt-1 accent-purple cursor-pointer flex-shrink-0" 
+                      className="w-6 h-6 mt-1 accent-[#6db305] cursor-pointer flex-shrink-0" 
                     />
                     <label htmlFor="waiver" className="text-sm text-orange-900 cursor-pointer select-none leading-relaxed">
                       <strong>I agree and confirm:</strong> I am the rightful owner (or authorized representative) of the logos, images, videos, and intellectual property submitted through this link. I grant ACE Digital Solutions, LLC the right to use these assets exclusively for fulfilling my project. ACE Digital Solutions is not liable for any copyright infringement claims arising from the assets I provide.
@@ -225,11 +228,11 @@ ${formData.projectNotes || "No additional notes provided."}
                   </div>
                 </div>
 
-                {/* Submit Button */}
+                {/* Submit Button - Changed to Brand Blue default and Brand Green hover with Glow */}
                 <button 
                   type="submit" 
-                  disabled={status === "sending" || !isChecked}
-                  className="w-full py-5 bg-purple text-white font-bold text-lg rounded-xl shadow-lg hover:bg-main-black hover:shadow-xl transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  disabled={status === "sending"}
+                  className="w-full py-5 bg-[#094a66] text-white font-bold text-lg rounded-xl shadow-lg hover:bg-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.4)] transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {status === "sending" ? "Submitting Assets..." : "Securely Submit Assets"}
                   {!status && <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>}

@@ -15,7 +15,7 @@ export default function WorkProcessOne() {
     }
   }, []);
 
-  // আপনার সবগুলো সার্ভিসকে ৪টি সুন্দর ক্যাটাগরিতে সাজানো হয়েছে আইকনসহ
+  // আপনার সবগুলো সার্ভিসকে ৪টি সুন্দর ক্যাটাগরিতে সাজানো হয়েছে আইকনসহ
   const servicesData = [
     {
       title: "AI Avatars & CGI Advertising",
@@ -61,16 +61,20 @@ export default function WorkProcessOne() {
 
   return (
     <section id="working-process">
-      <div className="working-process-section-wrapper w-full xl:pb-[130px] pb-[60px]">
+      {/* pt-[80px] যুক্ত করা হয়েছে যাতে উপরের সেকশনের সাথে লেগে না যায় */}
+      <div className="working-process-section-wrapper w-full xl:pb-[130px] pb-[60px] pt-[80px] xl:pt-[100px]">
         <div className="mx-auto theme-container">
           <div className="w-full grid-cols-12 xl:grid">
             
             {/* --- Left Side: Services List --- */}
             <div className="col-span-5">
               <div className="title-area">
-                <span className="mb-5 section-title-top-tag">Our Core Services</span>
+                {/* Changed Tag: Text Brand Green and Border Brand Green */}
+                <span className="mb-5 section-title-top-tag !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 rounded-full">
+                  Our Core Services
+                </span>
                 
-                {/* অরিজিনাল থিমের ফন্ট স্টাইল হুবহু রাখা হয়েছে */}
+                {/* অরিজিনাল থিমের ফন্ট স্টাইল হুবহু রাখা হয়েছে */}
                 <h2 className="md:text-48 text-34 font-semibold text-main-black mb-[50px]">
                   End-to-End Digital Solutions for Modern Brands
                 </h2>
@@ -84,16 +88,16 @@ export default function WorkProcessOne() {
                       key={index}
                       data-aos="fade-up"
                       data-aos-delay={item.delay}
-                      className="w-full rounded-[20px] border border-[#e7e3fa] bg-main-gray px-10 py-[30px] overflow-hidden group relative"
+                      className="w-full rounded-[20px] border border-[#e7e3fa] bg-main-gray px-10 py-[30px] overflow-hidden group relative hover:border-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.15)] transition-all duration-300"
                     >
                       <div className="relative z-10 flex flex-col space-y-5">
-                        {/* নাম্বারের বদলে আইকন ব্যবহার করা হয়েছে (অরিজিনাল সার্কেল স্টাইল) */}
-                        <div className="flex items-center justify-center w-10 h-10 bg-white border-2 rounded-full border-purple text-purple">
+                        {/* Icon Background and Text Color Changed to Brand Blue & Green */}
+                        <div className="flex items-center justify-center w-10 h-10 bg-white border-2 rounded-full border-[#094a66] text-[#094a66] group-hover:border-[#6db305] group-hover:text-[#6db305] group-hover:shadow-[0_0_15px_rgba(109,179,5,0.4)] transition-all duration-300">
                           {item.icon}
                         </div>
                         <div>
                           {/* অরিজিনাল টাইটেল এবং টেক্সট স্টাইল */}
-                          <p className="mb-4 font-semibold text-20 text-main-black">
+                          <p className="mb-4 font-semibold text-20 text-main-black group-hover:text-[#094a66] transition-colors duration-300">
                             {item.title}
                           </p>
                           <p className="text-paragraph">
@@ -103,11 +107,11 @@ export default function WorkProcessOne() {
                       </div>
                       
                       {/* Hover Background Shape (Original Theme Style) */}
-                      <div className="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100">
+                      <div className="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 pointer-events-none">
                         <img
                           src="./assets/images/home-one-ff-item-shape-2.webp"
                           alt=""
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover opacity-50"
                         />
                       </div>
                     </div>
@@ -126,9 +130,9 @@ export default function WorkProcessOne() {
                       id="home-working-cursor-anim"
                       className="relative"
                     >
-                      {/* Floating Badge 1 */}
+                      {/* Floating Badge 1 - Changed to Brand Blue */}
                       <div data-depth="0.30" className="z-10 layer h-fit">
-                        <span className="px-[30px] py-2.5 bg-purple shadow-small shadow-purple text-pone text-white rounded-br-none rounded-full md:inline-block hidden">
+                        <span className="px-[30px] py-2.5 bg-[#094a66] shadow-[0_5px_15px_rgba(9,74,102,0.4)] text-pone text-white rounded-br-none rounded-full md:inline-block hidden">
                           AI Powered
                         </span>
                       </div>
@@ -144,9 +148,9 @@ export default function WorkProcessOne() {
                         </div>
                       </div>
                       
-                      {/* Floating Badge 2 */}
+                      {/* Floating Badge 2 - Changed to Brand Green */}
                       <div data-depth="0.20" className="layer h-fit">
-                        <span className="md:inline-block hidden px-[30px] py-2.5 bg-blue-sass text-pone text-white rounded-br-none rounded-full shadow-small shadow-blue-sass">
+                        <span className="md:inline-block hidden px-[30px] py-2.5 bg-[#6db305] text-pone text-white rounded-br-none rounded-full shadow-[0_5px_15px_rgba(109,179,5,0.4)]">
                           Scalable Growth
                         </span>
                       </div>

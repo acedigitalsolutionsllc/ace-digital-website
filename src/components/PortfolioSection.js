@@ -97,17 +97,18 @@ export default function PortfolioSection({ activeCategory, onCategoryChange }) {
   return (
     <section id="portfolio-section" className="w-full py-[100px] bg-white relative overflow-hidden">
       
-      {/* Background Glow Effects */}
+      {/* Background Glow Effects - Changed to Brand Colors */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-purple/5 rounded-full blur-[100px]"></div>
-        <div className="absolute bottom-[-10%] left-[-5%] w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px]"></div>
+        <div className="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-[#094a66]/10 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-[-10%] left-[-5%] w-[300px] h-[300px] bg-[#6db305]/10 rounded-full blur-[100px]"></div>
       </div>
 
       <div className="mx-auto theme-container relative z-10">
         
         {/* --- Header Area --- */}
         <div className="flex flex-col items-center mb-12 text-center">
-          <span className="px-5 py-1.5 mb-4 text-sm font-semibold text-purple bg-purple/10 border border-purple/20 rounded-full">
+          {/* FIXED: Added '!' and Brand Green color for consistent section tags */}
+          <span className="px-5 py-1.5 mb-4 text-sm font-semibold !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 rounded-full">
             Our Works
           </span>
           <h2 className="text-3xl md:text-[45px] font-bold text-main-black mb-4">
@@ -126,8 +127,10 @@ export default function PortfolioSection({ activeCategory, onCategoryChange }) {
               onClick={() => onCategoryChange(category)}
               className={`px-4 py-2 md:px-6 md:py-2.5 rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 ${
                 activeCategory === category
-                  ? "bg-purple text-white shadow-md transform scale-105"
-                  : "bg-transparent text-main-black hover:bg-purple/10 hover:text-purple"
+                  // Active state: Deep Blue BG with Green Glow
+                  ? "bg-[#094a66] text-white shadow-[0_0_15px_rgba(109,179,5,0.4)] transform scale-105"
+                  // Inactive state: Hover gets Green color and faint green bg
+                  : "bg-transparent text-main-black hover:bg-[#6db305]/10 hover:text-[#6db305]"
               }`}
             >
               {category}
@@ -154,9 +157,9 @@ export default function PortfolioSection({ activeCategory, onCategoryChange }) {
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-              {/* YouTube Play Button Center */}
+              {/* Play Button Center (Changed to Brand Green with Glow) */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-16 h-16 bg-red-600/90 backdrop-blur-md rounded-full flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-[#6db305]/90 backdrop-blur-md rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(109,179,5,0.5)] transform group-hover:scale-110 group-hover:shadow-[0_0_25px_rgba(109,179,5,0.8)] transition-all duration-300">
                   {/* Play Icon */}
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="ml-1"><path d="M8 5v14l11-7z"></path></svg>
                 </div>
@@ -164,7 +167,8 @@ export default function PortfolioSection({ activeCategory, onCategoryChange }) {
 
               {/* Text Bottom */}
               <div className="absolute bottom-0 left-0 w-full p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                <span className="px-3 py-1 bg-purple text-white text-xs font-bold rounded-md mb-2 inline-block shadow-sm">
+                {/* Category Badge: Changed to Brand Blue */}
+                <span className="px-3 py-1 bg-[#094a66] text-white text-xs font-bold rounded-md mb-2 inline-block shadow-sm">
                   {project.category}
                 </span>
                 <h3 className="text-white font-bold text-xl leading-tight">
@@ -188,10 +192,10 @@ export default function PortfolioSection({ activeCategory, onCategoryChange }) {
       {isModalOpen && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 md:p-10 transition-opacity duration-300">
           
-          {/* Close Button */}
+          {/* Close Button - Hover color changed to Brand Green with Glow */}
           <button 
             onClick={closeVideoModal}
-            className="absolute top-5 right-5 md:top-10 md:right-10 w-12 h-12 bg-white/10 hover:bg-red-600 border border-white/20 rounded-full flex items-center justify-center text-white transition-colors duration-300 z-50"
+            className="absolute top-5 right-5 md:top-10 md:right-10 w-12 h-12 bg-white/10 hover:bg-[#6db305] hover:shadow-[0_0_15px_rgba(109,179,5,0.5)] border border-white/20 rounded-full flex items-center justify-center text-white transition-all duration-300 z-50"
           >
             <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>

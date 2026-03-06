@@ -24,7 +24,7 @@ export default function ContactForm() {
         (result) => {
           setStatus("Success! Your message has been sent to ACE Digital Solutions.");
           setIsSubmitting(false);
-          e.target.reset(); // ফর্ম ক্লিয়ার করা
+          e.target.reset(); // ফর্ম ক্লিয়ার করা
         },
         (error) => {
           setStatus("Oops! Failed to send message. Please try again.");
@@ -40,7 +40,8 @@ export default function ContactForm() {
         
         {/* --- Address & Info Start --- */}
         <div className="lg:col-span-5">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-purple/10 text-purple font-bold text-xs uppercase tracking-widest mb-5 border border-purple/20">
+          {/* Tag changed to Brand Green with Glow border styling */}
+          <span className="inline-block py-1.5 px-4 rounded-full !bg-[#6db305]/10 !text-[#6db305] font-bold text-xs uppercase tracking-widest mb-5 border !border-[#6db305]/20">
             Contact Us
           </span>
           <h1 className="font-extrabold text-main-black text-4xl md:text-[45px] font-montserrat leading-tight">
@@ -53,7 +54,8 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-[50px] mt-12">
             <div className="col-span-1">
               <h1 className="flex gap-3 items-center mb-4">
-                <div className="w-10 h-10 rounded-full bg-[#f4f1ff] flex items-center justify-center text-purple">
+                {/* Icon Background & Text Color changed to Brand Blue */}
+                <div className="w-10 h-10 rounded-full bg-[#094a66]/10 flex items-center justify-center text-[#094a66]">
                   {/* Location SVG Icon */}
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -72,7 +74,8 @@ export default function ContactForm() {
             
             <div className="col-span-1">
               <h1 className="flex gap-3 items-center mb-4">
-                <div className="w-10 h-10 rounded-full bg-[#f4f1ff] flex items-center justify-center text-purple">
+                {/* Icon Background & Text Color changed to Brand Blue */}
+                <div className="w-10 h-10 rounded-full bg-[#094a66]/10 flex items-center justify-center text-[#094a66]">
                   {/* Envelope SVG Icon */}
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -83,43 +86,45 @@ export default function ContactForm() {
                   Contact Info
                 </span>
               </h1>
-              <p className="mt-1 text-paragraph font-medium hover:text-purple transition-colors">
+              {/* Hover color changed to Brand Green */}
+              <p className="mt-1 text-paragraph font-medium hover:text-[#6db305] transition-colors">
                 <a href="mailto:joe@aceavatars.com">joe@aceavatars.com</a>
               </p>
-              <p className="mt-1 text-paragraph font-medium hover:text-purple transition-colors">
+              <p className="mt-1 text-paragraph font-medium hover:text-[#6db305] transition-colors">
                 <a href="mailto:info@aceavatars.com">info@aceavatars.com</a>
               </p>
-              <p className="mt-1 text-paragraph font-medium hover:text-purple transition-colors">
+              <p className="mt-1 text-paragraph font-medium hover:text-[#6db305] transition-colors">
                 <a href="tel:+17252223947">(725) 222-3947</a>
               </p>
             </div>
           </div>
           
-          <hr className="border-purple/10 mt-12 mb-[40px]" />
+          {/* Border line changed to Brand Blue tint */}
+          <hr className="border-[#094a66]/10 mt-12 mb-[40px]" />
           
           <div className="flex items-center gap-5">
             <h1 className="font-bold text-lg text-main-black">
               Follow Us
             </h1>
             <div className="flex gap-3">
-              {/* Facebook SVG Icon */}
-              <a href="https://www.facebook.com/ACEDigitalSolutionsLLC" target="_blank" rel="noreferrer" className="w-10 h-10 text-purple hover:text-white rounded-full flex justify-center items-center border border-purple/20 overflow-hidden relative before:absolute before:z-0 before:w-full before:h-full before:bg-purple before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300">
+              {/* Facebook SVG Icon - Brand Colors + Glow */}
+              <a href="https://www.facebook.com/ACEDigitalSolutionsLLC" target="_blank" rel="noreferrer" className="w-10 h-10 text-[#094a66] hover:text-white rounded-full flex justify-center items-center border border-[#094a66]/20 hover:border-[#6db305] overflow-hidden relative before:absolute before:z-0 before:w-full before:h-full before:bg-[#6db305] before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300 hover:shadow-[0_0_15px_rgba(109,179,5,0.5)]">
                 <span className="relative z-10 flex items-center justify-center">
                   <svg width="14" height="14" viewBox="0 0 320 512" fill="currentColor">
                     <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
                   </svg>
                 </span>
               </a>
-              {/* LinkedIn SVG Icon */}
-              <a href="https://www.linkedin.com/company/110917083/admin/dashboard/" target="_blank" rel="noreferrer" className="w-10 h-10 text-purple hover:text-white rounded-full flex justify-center items-center border border-purple/20 overflow-hidden relative before:absolute before:z-0 before:w-full before:h-full before:bg-purple before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300">
+              {/* LinkedIn SVG Icon - Brand Colors + Glow */}
+              <a href="https://www.linkedin.com/company/110917083/admin/dashboard/" target="_blank" rel="noreferrer" className="w-10 h-10 text-[#094a66] hover:text-white rounded-full flex justify-center items-center border border-[#094a66]/20 hover:border-[#6db305] overflow-hidden relative before:absolute before:z-0 before:w-full before:h-full before:bg-[#6db305] before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300 hover:shadow-[0_0_15px_rgba(109,179,5,0.5)]">
                 <span className="relative z-10 flex items-center justify-center">
                   <svg width="14" height="14" viewBox="0 0 448 512" fill="currentColor">
                     <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
                   </svg>
                 </span>
               </a>
-              {/* YouTube SVG Icon */}
-              <a href="https://www.youtube.com/@ACEDigitalSolutionsLLC" target="_blank" rel="noreferrer" className="w-10 h-10 text-purple hover:text-white rounded-full flex justify-center items-center border border-purple/20 overflow-hidden relative before:absolute before:z-0 before:w-full before:h-full before:bg-purple before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300">
+              {/* YouTube SVG Icon - Brand Colors + Glow */}
+              <a href="https://www.youtube.com/@ACEDigitalSolutionsLLC" target="_blank" rel="noreferrer" className="w-10 h-10 text-[#094a66] hover:text-white rounded-full flex justify-center items-center border border-[#094a66]/20 hover:border-[#6db305] overflow-hidden relative before:absolute before:z-0 before:w-full before:h-full before:bg-[#6db305] before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300 hover:shadow-[0_0_15px_rgba(109,179,5,0.5)]">
                 <span className="relative z-10 flex items-center justify-center">
                   <svg width="16" height="16" viewBox="0 0 576 512" fill="currentColor">
                     <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.781 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
@@ -144,32 +149,33 @@ export default function ContactForm() {
             {/* Active EmailJS Form */}
             <form ref={form} onSubmit={sendEmail} className="grid grid-cols-1 md:grid-cols-12 gap-[30px]">
               
+              {/* Input Focus updated to Brand Green with Glow */}
               <input
                 type="text"
                 name="user_name"
                 required
                 placeholder="Full Name *"
-                className="md:col-span-6 h-[45px] focus:outline-none border-b border-purple/20 focus:border-purple bg-transparent font-medium"
+                className="md:col-span-6 h-[45px] focus:outline-none border-b border-[#094a66]/20 focus:border-[#6db305] focus:shadow-[0_4px_10px_-4px_rgba(109,179,5,0.4)] bg-transparent font-medium transition-all"
               />
               <input
                 type="email"
                 name="user_email"
                 required
                 placeholder="Email Address *"
-                className="md:col-span-6 h-[45px] focus:outline-none border-b border-purple/20 focus:border-purple bg-transparent font-medium"
+                className="md:col-span-6 h-[45px] focus:outline-none border-b border-[#094a66]/20 focus:border-[#6db305] focus:shadow-[0_4px_10px_-4px_rgba(109,179,5,0.4)] bg-transparent font-medium transition-all"
               />
               <input
                 type="tel"
                 name="user_phone"
                 placeholder="Phone Number"
-                className="md:col-span-6 h-[45px] focus:outline-none border-b border-purple/20 focus:border-purple bg-transparent font-medium"
+                className="md:col-span-6 h-[45px] focus:outline-none border-b border-[#094a66]/20 focus:border-[#6db305] focus:shadow-[0_4px_10px_-4px_rgba(109,179,5,0.4)] bg-transparent font-medium transition-all"
               />
               
               <select 
                 name="interest" 
                 required 
                 defaultValue=""
-                className="md:col-span-6 h-[45px] focus:outline-none border-b border-purple/20 focus:border-purple bg-transparent font-medium text-paragraph cursor-pointer"
+                className="md:col-span-6 h-[45px] focus:outline-none border-b border-[#094a66]/20 focus:border-[#6db305] focus:shadow-[0_4px_10px_-4px_rgba(109,179,5,0.4)] bg-transparent font-medium text-paragraph cursor-pointer transition-all"
               >
                 <option value="" disabled>Interested In *</option>
                 <option value="AI Clone Avatar">AI Clone Avatar</option>
@@ -182,14 +188,15 @@ export default function ContactForm() {
                 name="message"
                 required
                 placeholder="How can we help you? *"
-                className="md:col-span-12 focus:outline-none border-b border-purple/20 focus:border-purple bg-transparent h-[100px] resize-none font-medium pt-2"
+                className="md:col-span-12 focus:outline-none border-b border-[#094a66]/20 focus:border-[#6db305] focus:shadow-[0_4px_10px_-4px_rgba(109,179,5,0.4)] bg-transparent h-[100px] resize-none font-medium pt-2 transition-all"
               ></textarea>
 
               <div className="md:col-span-12 mt-4 flex flex-col items-start gap-4">
+                {/* Submit Button - Brand Blue Default, Brand Green Hover with Glow */}
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="py-3 px-8 bg-purple rounded-full cursor-pointer hover:bg-main-black transition-all duration-300 flex items-center gap-2 group w-fit shadow-md disabled:opacity-70"
+                  className="py-3 px-8 bg-[#094a66] rounded-full cursor-pointer hover:bg-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.4)] transition-all duration-300 flex items-center gap-2 group w-fit disabled:opacity-70"
                 >
                   <span className="text-base font-bold text-white transition-all duration-300 font-inter uppercase tracking-wide text-sm">
                     {isSubmitting ? "Sending..." : "Send Message"}

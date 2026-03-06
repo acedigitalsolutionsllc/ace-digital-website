@@ -38,7 +38,7 @@ export default function DemoHeaderOne() {
                   <img 
                     src="/assets/images/ace-logo.svg" 
                     alt="ACE Digital Solutions" 
-                    className="h-[150px] w-auto object-contain" 
+                    className="h-[80px] w-auto object-contain" 
                   />
                 </Link>
               </div>
@@ -46,49 +46,52 @@ export default function DemoHeaderOne() {
               {/* 2. Navigation Menu */}
               <div>
                 <ul className="flex items-center space-x-10">
-                  <li className="font-semibold text-paragraph hover:underline hover:text-purple transition-all duration-300">
+                  {/* Hover Color Changed to #6db305 (Green) */}
+                  <li className="font-semibold text-paragraph hover:underline hover:text-[#6db305] transition-all duration-300">
                     <Link to="/">Home</Link>
                   </li>
-                  <li className="font-semibold text-paragraph hover:underline hover:text-purple transition-all duration-300">
+                  <li className="font-semibold text-paragraph hover:underline hover:text-[#6db305] transition-all duration-300">
                     <Link to="/about">About Us</Link>
                   </li>
 
                   {/* --- Our Works Dropdown Menu --- */}
                   <li className="relative group font-semibold text-paragraph transition-all duration-300 cursor-pointer h-[95px] flex items-center">
-                    <div className="flex items-center gap-1 hover:text-purple">
+                    <div className="flex items-center gap-1 hover:text-[#6db305]">
                       Our Works
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="mt-0.5 group-hover:rotate-180 transition-transform duration-300"><path d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                     
+                    {/* Dropdown Box */}
                     <ul className="absolute top-[80px] left-0 w-[260px] bg-white border border-[#e7e3fa] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col py-3">
-                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
-                        <Link to="/" state={{ category: "AI Digital Twins & Spokespersons" }} className="block w-full text-main-black hover:text-purple text-sm">AI Digital Twins & Spokespersons</Link>
+                      <li className="hover:bg-[#6db305]/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "AI Digital Twins & Spokespersons" }} className="block w-full text-main-black hover:text-[#6db305] text-sm">AI Digital Twins & Spokespersons</Link>
                       </li>
-                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
-                        <Link to="/" state={{ category: "Shorts/Reels" }} className="block w-full text-main-black hover:text-purple text-sm">Shorts/Reels</Link>
+                      <li className="hover:bg-[#6db305]/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "Shorts/Reels" }} className="block w-full text-main-black hover:text-[#6db305] text-sm">Shorts/Reels</Link>
                       </li>
-                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
-                        <Link to="/" state={{ category: "Promo Video" }} className="block w-full text-main-black hover:text-purple text-sm">Promo Video</Link>
+                      <li className="hover:bg-[#6db305]/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "Promo Video" }} className="block w-full text-main-black hover:text-[#6db305] text-sm">Promo Video</Link>
                       </li>
-                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
-                        <Link to="/" state={{ category: "Banner Ads" }} className="block w-full text-main-black hover:text-purple text-sm">Banner Ads</Link>
+                      <li className="hover:bg-[#6db305]/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "Banner Ads" }} className="block w-full text-main-black hover:text-[#6db305] text-sm">Banner Ads</Link>
                       </li>
-                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
-                        <Link to="/" state={{ category: "CGI Advertising" }} className="block w-full text-main-black hover:text-purple text-sm">CGI Advertising</Link>
+                      <li className="hover:bg-[#6db305]/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "CGI Advertising" }} className="block w-full text-main-black hover:text-[#6db305] text-sm">CGI Advertising</Link>
                       </li>
-                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors">
-                        <Link to="/" state={{ category: "Thumbnail" }} className="block w-full text-main-black hover:text-purple text-sm">Thumbnail</Link>
+                      <li className="hover:bg-[#6db305]/10 px-5 py-2.5 transition-colors">
+                        <Link to="/" state={{ category: "Thumbnail" }} className="block w-full text-main-black hover:text-[#6db305] text-sm">Thumbnail</Link>
                       </li>
-                      <li className="hover:bg-purple/10 px-5 py-2.5 transition-colors border-t border-[#e7e3fa] mt-1 pt-2">
-                        <Link to="/" state={{ category: "All" }} className="block w-full text-purple font-bold text-sm">View All Projects</Link>
+                      <li className="hover:bg-[#6db305]/10 px-5 py-2.5 transition-colors border-t border-[#e7e3fa] mt-1 pt-2">
+                        {/* Changed Text color to Brand Blue */}
+                        <Link to="/" state={{ category: "All" }} className="block w-full text-[#094a66] font-bold text-sm">View All Projects</Link>
                       </li>
                     </ul>
                   </li>
-                  {/* --- End Our Works Dropdown --- */}
+                  {/* --- End Dropdown Menu --- */}
 
-                  {/* --- Services MEGA MENU (New) --- */}
+                  {/* --- Services MEGA MENU --- */}
                   <li className="relative group font-semibold text-paragraph transition-all duration-300 h-[95px] flex items-center">
-                    <div className="flex items-center gap-1 hover:text-purple cursor-pointer">
+                    <div className="flex items-center gap-1 hover:text-[#6db305] cursor-pointer">
                       Services
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="mt-0.5 group-hover:rotate-180 transition-transform duration-300"><path d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -101,15 +104,16 @@ export default function DemoHeaderOne() {
                         <div className="flex flex-col">
                           <div className="flex items-center justify-between mb-5 pb-4 border-b border-[#e7e3fa]">
                             <h3 className="text-[17px] font-bold text-main-black">Video Editing</h3>
-                            <div className="w-8 h-8 rounded-full bg-purple text-white flex items-center justify-center shadow-sm">
+                            {/* Original icon styles with Blue Background & Glow on Hover */}
+                            <div className="w-8 h-8 rounded-full bg-[#094a66] text-white flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(109,179,5,0.5)]">
                               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                           </div>
                           <ul className="space-y-3.5">
-                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Podcast Video Editing</Link></li>
-                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Short-Form & Reels Editing</Link></li>
-                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Talking Head Video Editing</Link></li>
-                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">SaaS Editing Service</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-[#6db305] transition-colors">Podcast Video Editing</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-[#6db305] transition-colors">Short-Form & Reels Editing</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-[#6db305] transition-colors">Talking Head Video Editing</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-[#6db305] transition-colors">SaaS Editing Service</Link></li>
                           </ul>
                         </div>
 
@@ -117,13 +121,13 @@ export default function DemoHeaderOne() {
                         <div className="flex flex-col border-l border-[#e7e3fa] pl-8">
                           <div className="flex items-center justify-between mb-5 pb-4 border-b border-[#e7e3fa]">
                             <h3 className="text-[17px] font-bold text-main-black">Video Creation</h3>
-                            <div className="w-8 h-8 rounded-full bg-purple text-white flex items-center justify-center shadow-sm">
+                            <div className="w-8 h-8 rounded-full bg-[#094a66] text-white flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(109,179,5,0.5)]">
                               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                           </div>
                           <ul className="space-y-3.5">
-                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Promo Video Editing</Link></li>
-                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Promotional Video</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-[#6db305] transition-colors">Promo Video Editing</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-[#6db305] transition-colors">Promotional Video</Link></li>
                           </ul>
                         </div>
 
@@ -131,15 +135,15 @@ export default function DemoHeaderOne() {
                         <div className="flex flex-col border-l border-[#e7e3fa] pl-8">
                           <div className="flex items-center justify-between mb-5 pb-4 border-b border-[#e7e3fa]">
                             <h3 className="text-[17px] font-bold text-main-black">Design</h3>
-                            <div className="w-8 h-8 rounded-full bg-purple text-white flex items-center justify-center shadow-sm">
+                            <div className="w-8 h-8 rounded-full bg-[#094a66] text-white flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(109,179,5,0.5)]">
                               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                           </div>
                           <ul className="space-y-3.5">
-                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Graphics Design</Link></li>
-                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Logo Design</Link></li>
-                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">Branding</Link></li>
-                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-purple transition-colors">UI/UX</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-[#6db305] transition-colors">Graphics Design</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-[#6db305] transition-colors">Logo Design</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-[#6db305] transition-colors">Branding</Link></li>
+                            <li><Link to="/services" className="block text-[15px] font-medium text-paragraph hover:text-[#6db305] transition-colors">UI/UX</Link></li>
                           </ul>
                         </div>
 
@@ -148,10 +152,10 @@ export default function DemoHeaderOne() {
                   </li>
                   {/* --- End Services MEGA MENU --- */}
 
-                  <li className="font-semibold text-paragraph hover:underline hover:text-purple transition-all duration-300">
+                  <li className="font-semibold text-paragraph hover:underline hover:text-[#6db305] transition-all duration-300">
                     <Link to="/pricing">Pricing</Link>
                   </li>
-                  <li className="font-semibold text-paragraph hover:underline hover:text-purple transition-all duration-300">
+                  <li className="font-semibold text-paragraph hover:underline hover:text-[#6db305] transition-all duration-300">
                     <Link to="/contact">Contact</Link>
                   </li>
                 </ul>
@@ -163,15 +167,20 @@ export default function DemoHeaderOne() {
               
               {/* Client Login Link */}
               <Link to="#">
-                <div className="flex space-x-1.5 items-center hover:text-purple transition-all duration-300">
-                  <span className="font-semibold text-main-black">Client Login</span>
+                <div className="flex space-x-1.5 items-center hover:text-[#6db305] transition-all duration-300">
+                  <span className="font-semibold text-main-black hover:text-[#6db305]">Client Login</span>
                 </div>
               </Link>
 
-              {/* Start Scaling Button Fixed */}
+              {/* --- ORIGINAL Button Animation Maintained, Color & Glow Added --- */}
               <Link to="/contact">
-                <div className="transition-all duration-500 home-two-btn-white-rev group before:bg-white after:bg-white border border-purple bg-purple hover:border-purple rounded-full px-8 py-3 flex items-center gap-2 cursor-pointer">
-                  <span className="relative z-10 text-base font-semibold text-white transition-all duration-300 group-hover:text-purple font-inter py-0.5">
+                {/* 1. border-[#094a66] এবং bg-[#094a66] ডিফল্ট কালার দেওয়া হলো। 
+                  2. hover:border-[#6db305] এবং গ্লো ইফেক্ট (hover:shadow) যুক্ত করা হলো।
+                  3. অরিজিনাল home-two-btn-white-rev, before:bg-white ইত্যাদি সব ঠিক রাখা হলো।
+                */}
+                <div className="transition-all duration-500 home-two-btn-white-rev group before:bg-white after:bg-white border border-[#094a66] bg-[#094a66] hover:border-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.4)] rounded-full px-8 py-3 flex items-center gap-2 cursor-pointer">
+                  {/* হোভার করলে টেক্সটটি আপনার ব্র্যান্ড ব্লু (#094a66) হয়ে যাবে, কারণ ব্যাকগ্রাউন্ড সাদা হয়ে আসবে */}
+                  <span className="relative z-10 text-base font-semibold text-white transition-all duration-300 group-hover:text-[#094a66] font-inter py-0.5">
                     Start Scaling
                   </span>
                   <svg
@@ -182,8 +191,9 @@ export default function DemoHeaderOne() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
+                    {/* হোভার করলে আইকনটির কালার ব্র্যান্ড ব্লু (#094a66) হয়ে যাবে */}
                     <path
-                      className="transition-all duration-300 group-hover:stroke-purple stroke-white"
+                      className="transition-all duration-300 group-hover:stroke-[#094a66] stroke-white"
                       d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
                       strokeWidth="1.5"
                       strokeLinecap="round"

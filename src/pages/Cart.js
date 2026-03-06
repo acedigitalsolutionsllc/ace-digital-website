@@ -16,7 +16,7 @@ const products = [
     desc: "Hyper-realistic AI avatar reading your script professionally.",
     mediaType: "video",
     thumb: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80",
-    previewUrl: "https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1" // আপনার ডেমো ভিডিও লিংক দেবেন
+    previewUrl: "https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1"
   },
   { 
     id: "p2", 
@@ -41,10 +41,10 @@ const products = [
     name: "Website Development", 
     price: 250, 
     desc: "Modern, high-converting React or WordPress website.",
-    note: "⚠️ Note: Domain & Premium Hosting costs are separate.", // আপনার বিশেষ নোট
+    note: "⚠️ Note: Domain & Premium Hosting costs are separate.",
     mediaType: "link",
     thumb: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80",
-    previewUrl: "https://www.aceavatars.com" // আপনার পোর্টফোলিও লিংক
+    previewUrl: "https://www.aceavatars.com"
   },
   { 
     id: "p5", 
@@ -81,7 +81,7 @@ export default function Cart() {
   const [customerInfo, setCustomerInfo] = useState({ name: "", email: "", notes: "" });
   
   // Preview Modal State
-  const [previewData, setPreviewData] = useState(null); // null means modal is closed
+  const [previewData, setPreviewData] = useState(null);
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
@@ -138,9 +138,13 @@ export default function Cart() {
 
       {/* Page Header */}
       <section className="relative w-full pt-[150px] pb-[60px] bg-[#f8f9fc] overflow-hidden">
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-purple/5 rounded-full blur-[100px] pointer-events-none"></div>
+        {/* Background glow changed to Brand Blue */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-[#094a66]/5 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="mx-auto theme-container relative z-10 text-center max-w-3xl">
-          <div className="inline-block px-5 py-1.5 mb-4 text-sm font-semibold text-purple bg-purple/10 border border-purple/20 rounded-full">Build Your Own Package</div>
+          {/* Tag changed to Brand Green with Glow border */}
+          <div className="inline-block px-5 py-1.5 mb-4 text-sm font-semibold !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 rounded-full">
+            Build Your Own Package
+          </div>
           <h1 className="text-4xl md:text-[50px] font-bold text-main-black mb-4">Select A la Carte Services</h1>
           <p className="text-paragraph font-medium text-lg">Choose exactly what you need. Preview our work, add quantities, and request an invoice instantly.</p>
         </div>
@@ -158,7 +162,8 @@ export default function Cart() {
             </div>
 
             {products.map((product) => (
-              <div key={product.id} className="flex flex-col sm:flex-row gap-5 p-5 bg-white border border-[#e7e3fa] hover:border-purple hover:shadow-[0_10px_30px_rgba(121,74,255,0.1)] rounded-3xl transition-all duration-300 group">
+              // Card hover changed to Brand Green with Glow
+              <div key={product.id} className="flex flex-col sm:flex-row gap-5 p-5 bg-white border border-[#e7e3fa] hover:border-[#6db305] hover:shadow-[0_10px_30px_rgba(109,179,5,0.15)] rounded-3xl transition-all duration-300 group">
                 
                 {/* Visual Thumbnail Area */}
                 <div 
@@ -170,14 +175,16 @@ export default function Cart() {
                   
                   {/* Icon Overlay based on Media Type */}
                   <div className="absolute inset-0 flex items-center justify-center">
+                    {/* Video play icon gets a Green Glow on Hover */}
                     {product.mediaType === "video" && (
-                      <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white shadow-lg"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div>
+                      <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white shadow-lg group-hover:shadow-[0_0_15px_rgba(220,38,38,0.8)] transition-all"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div>
                     )}
                     {product.mediaType === "image" && (
-                      <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/50"><svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+                      <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/50 group-hover:border-white transition-all"><svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
                     )}
+                    {/* Link Icon changed to Brand Blue */}
                     {product.mediaType === "link" && (
-                      <div className="w-10 h-10 bg-purple/90 rounded-full flex items-center justify-center text-white shadow-lg"><svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></div>
+                      <div className="w-10 h-10 bg-[#094a66]/90 rounded-full flex items-center justify-center text-white shadow-lg group-hover:bg-[#6db305] transition-all"><svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></div>
                     )}
                   </div>
                   <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-black/60 text-white text-[10px] rounded uppercase font-bold tracking-wider backdrop-blur-sm">Preview</div>
@@ -185,10 +192,11 @@ export default function Cart() {
 
                 {/* Details Area */}
                 <div className="flex-grow flex flex-col justify-center">
-                  <h3 className="font-bold text-xl text-main-black group-hover:text-purple transition-colors leading-tight">{product.name}</h3>
+                  {/* Title Hover changed to Brand Blue */}
+                  <h3 className="font-bold text-xl text-main-black group-hover:text-[#094a66] transition-colors leading-tight">{product.name}</h3>
                   <p className="text-sm text-paragraph mt-1.5 leading-snug">{product.desc}</p>
                   
-                  {/* Warning Note (For Web Dev etc) */}
+                  {/* Warning Note */}
                   {product.note && (
                     <p className="text-xs font-semibold text-orange-600 bg-orange-50 px-2 py-1 rounded border border-orange-100 mt-2 inline-block w-fit">
                       {product.note}
@@ -200,7 +208,8 @@ export default function Cart() {
                 
                 {/* Quantity Controls */}
                 <div className="flex flex-row sm:flex-col items-center justify-center gap-3 bg-main-gray p-3 rounded-2xl border border-[#e7e3fa] sm:min-w-[70px]">
-                  <button onClick={() => updateQuantity(product.id, 1)} className="w-8 h-8 rounded-full bg-purple text-white font-bold flex items-center justify-center shadow hover:bg-main-black hover:scale-110 transition-all">+</button>
+                  {/* Plus button changed to Brand Blue */}
+                  <button onClick={() => updateQuantity(product.id, 1)} className="w-8 h-8 rounded-full bg-[#094a66] text-white font-bold flex items-center justify-center shadow hover:bg-[#6db305] hover:scale-110 transition-all">+</button>
                   <span className="font-bold text-lg text-main-black">{cart[product.id] || 0}</span>
                   <button onClick={() => updateQuantity(product.id, -1)} className="w-8 h-8 rounded-full bg-white text-main-black border border-[#e7e3fa] font-bold flex items-center justify-center shadow-sm hover:text-red-500 hover:scale-110 transition-all">-</button>
                 </div>
@@ -222,7 +231,8 @@ export default function Cart() {
                       return (
                         <div key={product.id} className="flex justify-between items-center text-sm font-medium text-main-black bg-white p-3 rounded-xl border border-[#e7e3fa]">
                           <span className="truncate pr-2">
-                            <span className="bg-purple/10 text-purple px-2 py-0.5 rounded-md mr-2">{cart[product.id]}x</span>
+                            {/* Qty badge changed to Brand Blue */}
+                            <span className="bg-[#094a66]/10 text-[#094a66] px-2 py-0.5 rounded-md mr-2">{cart[product.id]}x</span>
                             {product.name}
                           </span>
                           <span className="text-main-black font-bold">${product.price * cart[product.id]}</span>
@@ -236,7 +246,8 @@ export default function Cart() {
 
               <div className="flex justify-between items-center pt-4 border-t-2 border-main-black mb-8">
                 <p className="font-bold text-lg text-main-black">Total Investment:</p>
-                <p className="font-black text-3xl text-purple">${totalAmount}</p>
+                {/* Total amount color changed to Brand Green */}
+                <p className="font-black text-3xl text-[#6db305] drop-shadow-[0_0_5px_rgba(109,179,5,0.3)]">${totalAmount}</p>
               </div>
 
               {/* Checkout Form */}
@@ -247,11 +258,13 @@ export default function Cart() {
                 </div>
               ) : (
                 <form onSubmit={handleCheckout} className="flex flex-col gap-4">
-                  <input type="text" placeholder="Your Name *" required value={customerInfo.name} onChange={(e) => setCustomerInfo({...customerInfo, name: e.target.value})} className="w-full h-[50px] px-4 bg-white border border-[#e7e3fa] focus:border-purple rounded-xl outline-none" />
-                  <input type="email" placeholder="Email Address *" required value={customerInfo.email} onChange={(e) => setCustomerInfo({...customerInfo, email: e.target.value})} className="w-full h-[50px] px-4 bg-white border border-[#e7e3fa] focus:border-purple rounded-xl outline-none" />
-                  <textarea placeholder="Brief notes about your brand..." rows="3" value={customerInfo.notes} onChange={(e) => setCustomerInfo({...customerInfo, notes: e.target.value})} className="w-full p-4 bg-white border border-[#e7e3fa] focus:border-purple rounded-xl outline-none resize-none"></textarea>
+                  {/* Inputs hover/focus changed to Brand Green Glow */}
+                  <input type="text" placeholder="Your Name *" required value={customerInfo.name} onChange={(e) => setCustomerInfo({...customerInfo, name: e.target.value})} className="w-full h-[50px] px-4 bg-white border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all" />
+                  <input type="email" placeholder="Email Address *" required value={customerInfo.email} onChange={(e) => setCustomerInfo({...customerInfo, email: e.target.value})} className="w-full h-[50px] px-4 bg-white border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all" />
+                  <textarea placeholder="Brief notes about your brand..." rows="3" value={customerInfo.notes} onChange={(e) => setCustomerInfo({...customerInfo, notes: e.target.value})} className="w-full p-4 bg-white border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none resize-none transition-all"></textarea>
 
-                  <button type="submit" disabled={totalAmount === 0 || status === "sending"} className="w-full py-4 mt-2 bg-purple text-white font-bold rounded-xl shadow-lg hover:bg-main-black hover:shadow-xl transition-all duration-300 disabled:bg-gray-400">
+                  {/* Submit Button changed to Brand Blue and Green Glow on Hover */}
+                  <button type="submit" disabled={totalAmount === 0 || status === "sending"} className="w-full py-4 mt-2 bg-[#094a66] text-white font-bold rounded-xl shadow-lg hover:bg-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.4)] transition-all duration-300 disabled:bg-gray-400">
                     {status === "sending" ? "Processing..." : "Request Invoice to Start"}
                   </button>
                   <p className="text-[11px] text-center text-paragraph mt-1">No payment required now. Secure invoice sent via email.</p>
@@ -271,7 +284,8 @@ export default function Cart() {
             {/* Modal Header */}
             <div className="bg-[#1a1a1a] p-4 flex justify-between items-center border-b border-white/10">
               <h3 className="text-white font-bold text-lg">{previewData.name}</h3>
-              <button onClick={() => setPreviewData(null)} className="w-10 h-10 bg-white/10 hover:bg-red-600 rounded-full flex items-center justify-center text-white transition-colors">
+              {/* Close Button Hover to Brand Green */}
+              <button onClick={() => setPreviewData(null)} className="w-10 h-10 bg-white/10 hover:bg-[#6db305] hover:shadow-[0_0_15px_rgba(109,179,5,0.5)] rounded-full flex items-center justify-center text-white transition-all">
                 <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
               </button>
             </div>
@@ -287,7 +301,8 @@ export default function Cart() {
               {previewData.mediaType === "link" && (
                 <div className="text-center text-white">
                   <p className="mb-4 text-lg text-gray-300">This is a web development service.</p>
-                  <a href={previewData.previewUrl} target="_blank" rel="noreferrer" className="inline-block px-8 py-3 bg-purple text-white font-bold rounded-full hover:bg-white hover:text-black transition-colors">Visit Demo Website</a>
+                  {/* Link Button changed to Brand Blue/Green */}
+                  <a href={previewData.previewUrl} target="_blank" rel="noreferrer" className="inline-block px-8 py-3 bg-[#094a66] hover:bg-[#6db305] hover:shadow-[0_0_15px_rgba(109,179,5,0.4)] text-white font-bold rounded-full transition-all">Visit Demo Website</a>
                 </div>
               )}
             </div>

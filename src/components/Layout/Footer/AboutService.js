@@ -17,133 +17,102 @@ export default function AboutOne() {
   return (
     <section id="home-one-about">
       <div className="home-one-about-wrapper w-full xl:pb-[153px] pb-[60px] pt-[80px]">
-        <div className="mx-auto theme-container max-w-7xl px-6 lg:px-8">
-          {/* Grid Layout: Stacks on mobile, Side-by-side on PC */}
-          <div className="w-full grid lg:grid-cols-2 grid-cols-1 md:gap-[80px] gap-[50px] lg:items-center relative">
+        <div className="mx-auto theme-container">
+          <div className="w-full grid xl:grid-cols-2 grid-cols-1 md:gap-[130px] gap-10 md:items-center relative">
             
-            {/* --- Left Side: Parallax Image Area --- */}
-            <div className="w-full about-thumbnil-area order-2 lg:order-1">
+            {/* --- Left Side: Image Area --- */}
+            <div className="w-full about-thumbnil-area order-2 xl:order-1 mt-10 xl:mt-0">
               <div
                 data-aos="fade-right"
-                className="lg:absolute relative lg:-left-10 left-0 top-0 lg:w-[550px] w-full flex justify-center lg:block"
+                className="xl:absolute relative lg:-left-16 left-0 top-0 lg:w-[682px] w-full"
               >
-                
-                {/* Background Shape (Hidden on mobile for clean look) */}
-                <div ref={sceneRef} id="about-shape-mouse-anim" className="hidden lg:block">
+                <div ref={sceneRef} id="about-shape-mouse-anim">
                   <div data-depth="0.20" className="layer">
-                    <div
-                      data-aos="fade-right"
-                      className="thumbnil-wrapper"
-                    >
-                      <img
-                        src="./assets/images/home-one-about-thumb-shape.webp"
-                        alt="Background Shape"
-                        className="w-full"
-                      />
+                    <div data-aos="fade-right" className="hidden thumbnil-wrapper md:block">
+                      <img src="./assets/images/home-one-about-thumb-shape.webp" alt="" />
                     </div>
                   </div>
                 </div>
                 
-                {/* Main Image - Fixed Size & Responsive */}
-                <div
-                  data-aos="fade-up"
-                  className="relative lg:absolute lg:-bottom-16 left-0 w-full md:w-[80%] lg:w-full z-10"
-                >
+                <div data-aos="fade-right" className="left-0 w-full thumbnil-main md:absolute -bottom-16">
                   <div className="flex justify-center w-full">
                     <img
                       src="./assets/images/ace-about-main.png"
-                      alt="Joseph Montemorano Working"
-                      className="w-full lg:w-[90%] h-[400px] md:h-[500px] lg:h-[600px] object-cover object-top rounded-[30px] shadow-2xl border-4 border-white"
+                      alt="Joseph Montemorano"
+                      className="rounded-[20px] w-[90%] md:w-full max-w-[480px] h-[400px] md:h-[520px] object-cover object-top shadow-lg"
                     />
                   </div>
                 </div>
 
-                {/* Floating Parallax Elements (Hidden on very small screens) */}
-                <div className="w-full sm:block hidden absolute left-0 top-0 h-full z-20">
-                  <div
-                    ref={sceneRef}
-                    id="home-one-about-mouse-anim"
-                    className="h-full relative"
-                  >
-                    <div
-                      className="absolute layer left-[70%] top-[20%] lg:left-[80%] lg:top-[25%]"
-                      data-depth="0.30"
-                    >
-                      <div
-                        data-aos="fade-left"
-                        data-aos-delay="100"
-                        className="inline-block h-fit px-[20px] py-2.5 bg-purple text-xs md:text-sm font-bold shadow-glass shadow-purple/30 text-white rounded-full rounded-bl-none"
-                      >
-                        <i className="fas fa-robot mr-2"></i> AI Avatar Active
+                {/* Floating Elements with Parallax */}
+                <div className="w-full md:block hidden absolute left-0 top-0 h-[550px]">
+                  <div ref={sceneRef} id="home-one-about-mouse-anim" className="h-full">
+                    <div className="absolute layer left-[65%] top-[25%]" data-depth="0.30">
+                      {/* Changed bg-purple to brand blue (#094a66) with a subtle glow shadow */}
+                      <div data-aos="fade-left" className="inline-block h-fit px-[30px] py-2.5 bg-[#094a66] text-white rounded-full rounded-bl-none font-medium shadow-[0_0_20px_rgba(9,74,102,0.3)]">
+                        AI Avatars Active
                       </div>
                     </div>
-                    
-                    <div
-                      data-depth="0.50"
-                      className="absolute bottom-[-20px] lg:bottom-[5%] layer left-[20%] lg:left-[40%]"
-                    >
-                      <div
-                        data-aos="fade-left"
-                        data-aos-delay="200"
-                        className="w-fit flex justify-between p-2 pl-4 pr-3 bg-white shadow-xl rounded-full items-center border border-slate-100 gap-3"
-                      >
-                        <span className="text-xs md:text-sm font-bold text-ace-dark whitespace-nowrap">
-                          77k+ Participants
-                        </span>
-                        <img
-                          src="/assets/images/home-one-about-group.webp"
-                          alt="Clients"
-                          className="h-7 md:h-8"
-                        />
+                    <div data-depth="0.50" className="absolute bottom-[-10px] layer left-[20%]">
+                      <div data-aos="fade-left" className="w-[296px] h-fit flex justify-between p-[7px] pl-5 bg-white shadow-style-one rounded-full items-center">
+                        <span className="text-sm font-semibold text-main-black">77k+ Global Clients</span>
+                        <img src="/assets/images/home-one-about-group.webp" alt="" />
                       </div>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
 
-            {/* --- Right Side: Content & Services --- */}
-            <div className="about-article-area z-10 relative order-1 lg:order-2">
-              <span className="inline-block py-1.5 px-4 rounded-full bg-purple/10 text-purple font-bold text-[11px] sm:text-xs uppercase tracking-widest mb-5 border border-purple/20">
+            {/* --- Right Side: Content Area --- */}
+            <div className="about-article-area order-1 xl:order-2 px-5 md:px-0">
+              
+              {/* FIXED: Using your requested brand green with important flag for consistent section tags */}
+              <span className="mb-5 section-title-top-tag !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 shadow-[0_0_15px_rgba(109,179,5,0.1)]">
                 The Architecture of Success
               </span>
               
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-montserrat text-main-black mb-[25px] md:mb-[35px] leading-[1.2]">
-                Hyper-Realistic AI & <br className="hidden sm:block"/> CGI Marketing That Scales.
+              <h2 className="md:text-48 text-34 font-semibold text-main-black mb-[35px] leading-[1.2]">
+                Hyper-Realistic AI & CGI Marketing That Scales.
               </h2>
-              
-              <p className="text-base md:text-lg text-paragraph mb-[30px] md:mb-[40px] font-sans leading-relaxed">
-                Where 10+ years of clinical precision meets cutting-edge digital innovation. Joseph Montemorano doesn't just build marketing strategies; he architects <strong>24/7 digital clones</strong> and jaw-dropping visual assets that do the selling for you.
+              <p className="text-paragraph mb-[50px]">
+                Where 10+ years of clinical precision meets cutting-edge digital innovation. We don't just build marketing strategies; we architect 24/7 digital clones and visual assets that do the selling for you.
               </p>
               
-              {/* Services List (Grid Layout) */}
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 mb-[40px] md:mb-[50px]">
-                <li className="flex space-x-3 items-center text-main-black font-semibold px-4 md:px-5 py-3 md:py-4 bg-white shadow-sm border border-[#e7e3fa] rounded-xl hover:border-purple hover:shadow-md transition-all duration-300">
-                  <span className="text-purple text-lg md:text-xl"><i className="fas fa-user-astronaut"></i></span>
-                  <span className="font-sans text-sm md:text-base">AI Clone Avatars</span>
-                </li>
-                <li className="flex space-x-3 items-center text-main-black font-semibold px-4 md:px-5 py-3 md:py-4 bg-white shadow-sm border border-[#e7e3fa] rounded-xl hover:border-purple hover:shadow-md transition-all duration-300">
-                  <span className="text-purple text-lg md:text-xl"><i className="fas fa-video"></i></span>
-                  <span className="font-sans text-sm md:text-base">CGI Advertising</span>
-                </li>
-                <li className="flex space-x-3 items-center text-main-black font-semibold px-4 md:px-5 py-3 md:py-4 bg-white shadow-sm border border-[#e7e3fa] rounded-xl hover:border-purple hover:shadow-md transition-all duration-300">
-                  <span className="text-purple text-lg md:text-xl"><i className="fas fa-chart-line"></i></span>
-                  <span className="font-sans text-sm md:text-base">Social Media Growth</span>
-                </li>
-                <li className="flex space-x-3 items-center text-main-black font-semibold px-4 md:px-5 py-3 md:py-4 bg-white shadow-sm border border-[#e7e3fa] rounded-xl hover:border-purple hover:shadow-md transition-all duration-300">
-                  <span className="text-purple text-lg md:text-xl"><i className="fas fa-briefcase-medical"></i></span>
-                  <span className="font-sans text-sm md:text-base">Healthcare Education</span>
-                </li>
+              <ul className="flex flex-wrap md:gap-[30px] gap-4 mb-[50px]">
+                {["AI Clone Avatars & CGI", "Pro Video Editing", "Graphics & Web Dev", "Social Media & Reels"].map((item, idx) => (
+                  // Text and icon color updated to Brand Blue (#094a66)
+                  <li key={idx} className="flex space-x-2.5 items-center text-[#094a66] font-medium px-5 py-3 bg-main-gray border border-[#e7e3fa] rounded-full w-full md:w-auto hover:border-[#6db305] transition-colors duration-300">
+                    <svg width="18" height="13" viewBox="0 0 18 13" fill="none"><path fillRule="evenodd" clipRule="evenodd" d="M16.751 0.287391C17.3457 0.749891 17.4528 1.60687 16.9903 2.20151L9.70279 11.5712C8.56844 13.0296 6.43472 13.2189 5.06137 11.9829L0.451552 7.83405C-0.108394 7.3301 -0.153786 6.46764 0.350164 5.90769C0.854115 5.34775 1.71657 5.30236 2.27652 5.80631L6.88634 9.95514C7.08253 10.1317 7.38735 10.1047 7.5494 9.89633L14.8369 0.526657C15.2994 -0.0679854 16.1564 -0.175108 16.751 0.287391Z" fill="currentColor" /></svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
               
-              {/* Call to Action Button */}
+              {/* --- Fixed Button with Brand Colors & Glow --- */}
               <Link to="/contact">
-                <div className="inline-flex py-3 md:py-3.5 px-6 md:px-8 bg-purple text-white rounded-full font-bold shadow-purple hover:bg-main-black hover:shadow-none transition-all duration-300 cursor-pointer items-center gap-2 group w-full sm:w-auto justify-center">
-                  <span className="font-montserrat uppercase tracking-wide text-xs md:text-sm">
+                {/* 1. Default BG: Brand Blue (#094a66)
+                   2. Hover Border: Brand Green (#6db305)
+                   3. Hover Shadow: Green Glow 
+                   4. Animation: Original sliding effect maintained
+                */}
+                <div className="transition-all duration-500 home-two-btn-white-rev group before:bg-white after:bg-white border border-[#094a66] bg-[#094a66] hover:border-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.5)] w-fit rounded-full px-8 py-3 flex items-center gap-2">
+                  <span className="text-base group-hover:text-[#094a66] text-white transition-all duration-300 font-semibold font-inter relative z-10 py-0.5">
                     Start Your Project
                   </span>
-                  <i className="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                  <svg
+                    className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
+                    width="7" height="12" viewBox="0 0 7 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      className="transition-all duration-300 group-hover:stroke-[#094a66] stroke-white"
+                      d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </div>
               </Link>
             </div>

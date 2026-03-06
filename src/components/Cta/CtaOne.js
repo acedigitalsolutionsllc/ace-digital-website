@@ -16,6 +16,7 @@ export default function CtaOne() {
       };
     }
   }, []);
+  
   return (
     <section data-aos="fade-up" id="consultation">
       <div className="relative w-full consultation-section-wrapper">
@@ -25,9 +26,12 @@ export default function CtaOne() {
               <img src="/assets/images/cta-dot-shape.webp" alt="" />
             </div>
             <div className="md:w-[432px] w-full">
-              <span className="mb-5 section-title-top-tag">
+              
+              {/* Changed Tag: Text Brand Green and Border Brand Green */}
+              <span className="mb-5 section-title-top-tag !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 rounded-full">
                 Get Consultations
               </span>
+              
               <h2 className="md:text-48 text-34 font-semibold text-main-black mb-[32px]">
                 Get your free digital marketing audit
               </h2>
@@ -35,21 +39,24 @@ export default function CtaOne() {
                 We’ve 25+ years of experience in digital marketing
               </p>
 
-              <Link href="/contact">
-                <div className="inline-flex py-3 home-two-btn-bg group bg-purple border-purple">
-                  <span className="relative z-10 text-base text-white transition-all duration-300 group-hover:text-purple font-inter">
+              <Link to="/contact">
+                {/* Button Background changed to Brand Blue (#094a66) with Green Glow on Hover */}
+                <div className="inline-flex py-3 home-two-btn-bg group bg-[#094a66] border-[#094a66] hover:border-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.4)] transition-all duration-500">
+                  {/* Text hover color changed to Brand Blue */}
+                  <span className="relative z-10 text-base text-white transition-all duration-300 group-hover:text-[#094a66] font-inter">
                     Get Consultation
                   </span>
                   <svg
-                    className="relative z-10"
+                    className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
                     width="7"
                     height="12"
                     viewBox="0 0 7 12"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
+                    {/* SVG stroke hover changed to Brand Blue */}
                     <path
-                      className="transition-all duration-300 group-hover:stroke-blue-seo"
+                      className="transition-all duration-300 group-hover:stroke-[#094a66]"
                       d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
                       stroke="white"
                       strokeWidth="1.5"

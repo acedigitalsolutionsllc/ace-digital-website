@@ -26,9 +26,9 @@ export default function SampleConsent() {
     emailjs
       .sendForm(
         "service_pgb2duk",       // Service ID
-        "template_udk8kdi",      // আপনার দেওয়া নতুন Template ID
+        "template_udk8kdi",      // আপনার দেওয়া নতুন Template ID
         form.current,
-        "WKtRNi6iZ_QylHBgl"      // আপনার দেওয়া Public Key
+        "WKtRNi6iZ_QylHBgl"      // আপনার দেওয়া Public Key
       )
       .then(
         (result) => {
@@ -49,13 +49,15 @@ export default function SampleConsent() {
       <DemoHeaderMobile />
 
       <section className="w-full pt-[150px] pb-[100px] bg-[#f8f9fc] relative">
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-purple/5 rounded-full blur-[100px] pointer-events-none"></div>
+        {/* Background Blur Effect changed to Brand Blue */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-[#094a66]/5 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div className="mx-auto theme-container max-w-3xl relative z-10">
           
           {/* Header */}
           <div className="text-center mb-10">
-            <span className="px-5 py-1.5 mb-4 text-sm font-semibold text-purple bg-purple/10 border border-purple/20 rounded-full inline-block">
+            {/* Tag changed to Brand Green with Glow border */}
+            <span className="px-5 py-1.5 mb-4 text-sm font-semibold !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 rounded-full inline-block">
               Free Sample Creation
             </span>
             <h1 className="text-3xl md:text-[42px] font-bold text-main-black mb-3">Digital Consent Form</h1>
@@ -74,9 +76,10 @@ export default function SampleConsent() {
                 </p>
                 <p>
                   <strong className="text-main-black">Our Guarantee to You:</strong><br/>
-                  <span className="text-purple mr-2">✔</span> The created content is completely free and yours to use.<br/>
-                  <span className="text-purple mr-2">✔</span> ACE Digital Solutions, LLC will <strong className="underline decoration-red-500">NOT</strong> post or publish this sample to any platforms.<br/>
-                  <span className="text-purple mr-2">✔</span> We will only use this content for our own promotional purposes if we obtain a separate, signed approval from you <em>after</em> the delivery of your free content.
+                  {/* Checkmarks changed to Brand Green */}
+                  <span className="text-[#6db305] font-bold mr-2">✔</span> The created content is completely free and yours to use.<br/>
+                  <span className="text-[#6db305] font-bold mr-2">✔</span> ACE Digital Solutions, LLC will <strong className="underline decoration-red-500">NOT</strong> post or publish this sample to any platforms.<br/>
+                  <span className="text-[#6db305] font-bold mr-2">✔</span> We will only use this content for our own promotional purposes if we obtain a separate, signed approval from you <em>after</em> the delivery of your free content.
                 </p>
               </div>
             </div>
@@ -90,7 +93,7 @@ export default function SampleConsent() {
                   </div>
                   <h3 className="text-2xl font-bold text-main-black mb-2">Consent Received!</h3>
                   <p className="text-paragraph mb-6">Thank you. We have received your authorization and will begin working on your free sample immediately.</p>
-                  <Link to="/" className="text-purple font-bold hover:underline">Return to Homepage</Link>
+                  <Link to="/" className="text-[#094a66] hover:text-[#6db305] font-bold hover:underline transition-colors duration-300">Return to Homepage</Link>
                 </div>
               ) : (
                 <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6">
@@ -98,32 +101,38 @@ export default function SampleConsent() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-bold text-main-black mb-2">Your Full Name *</label>
-                      <input type="text" name="client_name" required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-purple rounded-xl outline-none transition-all" placeholder="John Doe" />
+                      {/* Input focus changed to Brand Green with Glow */}
+                      <input type="text" name="client_name" required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all" placeholder="John Doe" />
                     </div>
                     <div>
                       <label className="block text-sm font-bold text-main-black mb-2">Company / Website Name *</label>
-                      <input type="text" name="company_name" required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-purple rounded-xl outline-none transition-all" placeholder="Your Brand LLC" />
+                      {/* Input focus changed to Brand Green with Glow */}
+                      <input type="text" name="company_name" required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all" placeholder="Your Brand LLC" />
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-sm font-bold text-main-black mb-2">Email Address *</label>
-                    <input type="email" name="client_email" required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-purple rounded-xl outline-none transition-all" placeholder="john@company.com" />
+                    {/* Input focus changed to Brand Green with Glow */}
+                    <input type="email" name="client_email" required className="w-full h-[55px] px-5 bg-main-gray border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all" placeholder="john@company.com" />
                   </div>
 
                   {/* Digital Signature */}
-                  <div className="bg-purple/5 p-6 rounded-xl border border-purple/20 mt-2">
+                  {/* Background changed to Brand Blue tint */}
+                  <div className="bg-[#094a66]/5 p-6 rounded-xl border border-[#094a66]/20 mt-2">
                     <label className="block text-sm font-bold text-main-black mb-2">Digital Signature (Type your full name) *</label>
-                    <input type="text" name="digital_signature" required className="w-full h-[55px] px-5 bg-white border border-[#e7e3fa] focus:border-purple rounded-xl outline-none transition-all font-mono text-purple text-lg" placeholder="Type your name to sign" />
+                    {/* Signature text and focus changed to Brand Colors */}
+                    <input type="text" name="digital_signature" required className="w-full h-[55px] px-5 bg-white border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all font-mono text-[#094a66] text-lg" placeholder="Type your name to sign" />
                     
                     <div className="flex items-start gap-3 mt-5 cursor-pointer">
+                      {/* Checkbox accent changed to Brand Green */}
                       <input 
                         type="checkbox" 
                         id="agree" 
                         required
                         checked={isChecked}
                         onChange={(e) => setIsChecked(e.target.checked)}
-                        className="w-5 h-5 mt-0.5 accent-purple cursor-pointer" 
+                        className="w-5 h-5 mt-0.5 accent-[#6db305] cursor-pointer" 
                       />
                       <label htmlFor="agree" className="text-sm text-paragraph cursor-pointer select-none">
                         I have read and agree to the terms stated above. I authorize ACE Digital Solutions, LLC to use my assets solely for this free sample.
@@ -131,10 +140,11 @@ export default function SampleConsent() {
                     </div>
                   </div>
 
+                  {/* Button changed to Brand Blue Default, Brand Green Hover with Glow */}
                   <button 
                     type="submit" 
                     disabled={status === "sending" || !isChecked}
-                    className="w-full mt-4 py-4 bg-purple text-white font-bold text-lg rounded-xl hover:bg-main-black transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                    className="w-full mt-4 py-4 bg-[#094a66] text-white font-bold text-lg rounded-xl hover:bg-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.4)] transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed"
                   >
                     {status === "sending" ? "Submitting Consent..." : "Authorize & Submit"}
                   </button>

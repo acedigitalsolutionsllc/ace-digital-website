@@ -48,7 +48,8 @@ export default function AboutOne() {
                 <div className="w-full md:block hidden absolute left-0 top-0 h-[550px]">
                   <div ref={sceneRef} id="home-one-about-mouse-anim" className="h-full">
                     <div className="absolute layer left-[65%] top-[25%]" data-depth="0.30">
-                      <div data-aos="fade-left" className="inline-block h-fit px-[30px] py-2.5 bg-purple text-white rounded-full rounded-bl-none font-medium shadow-lg">
+                      {/* Changed bg-purple to brand blue (#094a66) with a subtle glow shadow */}
+                      <div data-aos="fade-left" className="inline-block h-fit px-[30px] py-2.5 bg-[#094a66] text-white rounded-full rounded-bl-none font-medium shadow-[0_0_20px_rgba(9,74,102,0.3)]">
                         AI Avatars Active
                       </div>
                     </div>
@@ -65,7 +66,12 @@ export default function AboutOne() {
 
             {/* --- Right Side: Content Area --- */}
             <div className="about-article-area order-1 xl:order-2 px-5 md:px-0">
-              <span className="mb-5 section-title-top-tag">The Architecture of Success</span>
+              
+              {/* FIXED: Using your requested brand green with important flag for consistent section tags */}
+              <span className="mb-5 section-title-top-tag !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 shadow-[0_0_15px_rgba(109,179,5,0.1)]">
+                The Architecture of Success
+              </span>
+              
               <h2 className="md:text-48 text-34 font-semibold text-main-black mb-[35px] leading-[1.2]">
                 Hyper-Realistic AI & CGI Marketing That Scales.
               </h2>
@@ -75,21 +81,23 @@ export default function AboutOne() {
               
               <ul className="flex flex-wrap md:gap-[30px] gap-4 mb-[50px]">
                 {["AI Clone Avatars & CGI", "Pro Video Editing", "Graphics & Web Dev", "Social Media & Reels"].map((item, idx) => (
-                  <li key={idx} className="flex space-x-2.5 items-center text-purple font-medium px-5 py-3 bg-main-gray border border-[#e7e3fa] rounded-full w-full md:w-auto">
+                  // Text and icon color updated to Brand Blue (#094a66)
+                  <li key={idx} className="flex space-x-2.5 items-center text-[#094a66] font-medium px-5 py-3 bg-main-gray border border-[#e7e3fa] rounded-full w-full md:w-auto hover:border-[#6db305] transition-colors duration-300">
                     <svg width="18" height="13" viewBox="0 0 18 13" fill="none"><path fillRule="evenodd" clipRule="evenodd" d="M16.751 0.287391C17.3457 0.749891 17.4528 1.60687 16.9903 2.20151L9.70279 11.5712C8.56844 13.0296 6.43472 13.2189 5.06137 11.9829L0.451552 7.83405C-0.108394 7.3301 -0.153786 6.46764 0.350164 5.90769C0.854115 5.34775 1.71657 5.30236 2.27652 5.80631L6.88634 9.95514C7.08253 10.1317 7.38735 10.1047 7.5494 9.89633L14.8369 0.526657C15.2994 -0.0679854 16.1564 -0.175108 16.751 0.287391Z" fill="currentColor" /></svg>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
               
-              {/* --- Fixed Button (Matched with CtaSix) --- */}
+              {/* --- Fixed Button with Brand Colors & Glow --- */}
               <Link to="/contact">
-                {/* 1. `bg-purple` যুক্ত করা হয়েছে যাতে ডিফল্ট ব্যাকগ্রাউন্ড পার্পল থাকে।
-                  2. `hover:border-purple` দিয়ে হোভারের সময় বর্ডার ঠিক রাখা হয়েছে। 
-                  3. `home-two-btn-white-rev` ক্লাসটি আপনার CtaSix এর অ্যানিমেশন নিয়ে আসবে।
+                {/* 1. Default BG: Brand Blue (#094a66)
+                   2. Hover Border: Brand Green (#6db305)
+                   3. Hover Shadow: Green Glow 
+                   4. Animation: Original sliding effect maintained
                 */}
-                <div className="transition-all duration-500 home-two-btn-white-rev group before:bg-white after:bg-white border border-purple bg-purple hover:border-purple w-fit rounded-full px-8 py-3 flex items-center gap-2">
-                  <span className="text-base group-hover:text-purple text-white transition-all duration-300 font-semibold font-inter relative z-10 py-0.5">
+                <div className="transition-all duration-500 home-two-btn-white-rev group before:bg-white after:bg-white border border-[#094a66] bg-[#094a66] hover:border-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.5)] w-fit rounded-full px-8 py-3 flex items-center gap-2">
+                  <span className="text-base group-hover:text-[#094a66] text-white transition-all duration-300 font-semibold font-inter relative z-10 py-0.5">
                     Start Your Project
                   </span>
                   <svg
@@ -98,7 +106,7 @@ export default function AboutOne() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      className="transition-all duration-300 group-hover:stroke-purple stroke-white"
+                      className="transition-all duration-300 group-hover:stroke-[#094a66] stroke-white"
                       d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
                       strokeWidth="1.5"
                       strokeLinecap="round"

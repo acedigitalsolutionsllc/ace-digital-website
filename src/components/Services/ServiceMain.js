@@ -74,7 +74,8 @@ export default function ServiceMain() {
             
             {/* Header Section */}
             <div className="flex flex-col items-center">
-              <span className="text-purple font-medium px-5 py-3 border border-[#e7e3fa] leading-none rounded-full inline-block mb-5 bg-white shadow-sm">
+              {/* FIXED: Added !text-[#6db305] and !border-[#6db305] as requested for consistency */}
+              <span className="!text-[#6db305] font-medium px-5 py-3 border !border-[#6db305]/20 leading-none rounded-full inline-block mb-5 bg-[#6db305]/10 shadow-sm">
                 Explore Services
               </span>
               <h2 className="sm:text-48 text-32 font-semibold text-main-black mb-[60px] text-center lg:w-[800px] w-full leading-tight">
@@ -89,13 +90,14 @@ export default function ServiceMain() {
                 <div
                   key={index}
                   data-aos="zoom-out"
-                  data-aos-delay={(index % 4) * 150} // Staggered animation effect
-                  className="col-span-1 relative group border border-transparent common-transition before:inline-block before:w-full before:h-full before:border before:rounded-[10px] before:border-purple before:absolute before:bottom-0 before:right-0 before:shadow-common before:origin-bottom-right before:scale-0 hover:before:scale-100 before:transition-all before:duration-300 before:z-0 after:inline-block after:w-full after:h-full after:border after:rounded-[10px] after:border-purple after:absolute after:top-0 after:left-0 after:shadow-common after:origin-top-left after:scale-0 hover:after:scale-100 after:transition-all after:duration-300 after:z-0 before:ease-linear after:ease-linear cursor-pointer"
+                  data-aos-delay={(index % 4) * 150}
+                  // Border animations changed to Brand Green (#6db305) with Glow shadow on hover
+                  className="col-span-1 relative group border border-transparent common-transition before:inline-block before:w-full before:h-full before:border before:rounded-[10px] before:border-[#6db305] before:absolute before:bottom-0 before:right-0 hover:before:shadow-[0_0_20px_rgba(109,179,5,0.3)] before:origin-bottom-right before:scale-0 hover:before:scale-100 before:transition-all before:duration-300 before:z-0 after:inline-block after:w-full after:h-full after:border after:rounded-[10px] after:border-[#6db305] after:absolute after:top-0 after:left-0 hover:after:shadow-[0_0_20px_rgba(109,179,5,0.3)] after:origin-top-left after:scale-0 hover:after:scale-100 after:transition-all after:duration-300 after:z-0 before:ease-linear after:ease-linear cursor-pointer"
                 >
-                  <div className="flex flex-col relative px-6 py-10 justify-between items-center rounded-[10px] bg-white m-[1px] z-10 h-full text-center hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex flex-col relative px-6 py-10 justify-between items-center rounded-[10px] bg-white m-[1px] z-10 h-full text-center group-hover:shadow-2xl transition-all duration-300">
                     
-                    {/* SVG Icon */}
-                    <div className="w-[70px] h-[70px] flex justify-center items-center rounded-full bg-[#f4f1ff] group-hover:bg-purple transition-colors duration-300 text-purple group-hover:text-white shadow-inner mb-6">
+                    {/* SVG Icon Area - Updated to Brand Blue (#094a66) with Glow */}
+                    <div className="w-[70px] h-[70px] flex justify-center items-center rounded-full bg-[#094a66]/10 group-hover:bg-[#094a66] group-hover:shadow-[0_0_15px_rgba(9,74,102,0.4)] transition-all duration-300 text-[#094a66] group-hover:text-white shadow-inner mb-6">
                       <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         {item.icon}
                       </svg>
@@ -103,7 +105,7 @@ export default function ServiceMain() {
                     
                     {/* Text Content */}
                     <div className="flex-grow flex flex-col items-center">
-                      <p className="mb-3 font-semibold text-xl text-main-black font-montserrat">
+                      <p className="mb-3 font-semibold text-xl text-main-black font-montserrat group-hover:text-[#094a66] transition-colors">
                         {item.title}
                       </p>
                       <p className="text-paragraph text-sm leading-relaxed mb-6">
@@ -111,10 +113,10 @@ export default function ServiceMain() {
                       </p>
                     </div>
                     
-                    {/* Read More Button */}
+                    {/* Read More Button - Updated to Brand Green (#6db305) with Glow hover */}
                     <Link to="/contact" className="mt-auto">
-                      <div className="flex items-center gap-2 group/btn text-paragraph hover:text-purple transition-colors">
-                        <span className="relative font-semibold text-sm leading-5 border-b border-transparent font-inter before:inline-block before:border-purple before:border-b before:absolute before:bottom-0 before:transition-all before:duration-300 before:w-0 group-hover/btn:before:w-full before:overflow-hidden before:h-5">
+                      <div className="flex items-center gap-2 group/btn text-paragraph hover:text-[#6db305] transition-all duration-300">
+                        <span className="relative font-semibold text-sm leading-5 border-b border-transparent font-inter before:inline-block before:border-[#6db305] before:border-b before:absolute before:bottom-0 before:transition-all before:duration-300 before:w-0 group-hover/btn:before:w-full before:overflow-hidden before:h-5 group-hover/btn:drop-shadow-[0_0_5px_rgba(109,179,5,0.4)]">
                           Read More
                         </span>
                         <svg

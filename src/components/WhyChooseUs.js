@@ -3,17 +3,18 @@ import React from "react";
 export default function WhyChooseUs() {
   return (
     <section className="w-full py-[100px] bg-[#f8f9fc] relative overflow-hidden">
-      {/* Background Decorative Elements */}
+      {/* Background Decorative Elements - Updated to Brand Colors */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple/5 rounded-full blur-[100px]"></div>
-        <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]"></div>
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#094a66]/5 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-[#6db305]/5 rounded-full blur-[100px]"></div>
       </div>
 
       <div className="mx-auto theme-container relative z-10">
         
         {/* --- Header Section --- */}
         <div className="flex flex-col items-center mb-16 text-center">
-          <span className="px-5 py-1.5 mb-4 text-sm font-semibold text-purple bg-purple/10 border border-purple/20 rounded-full">
+          {/* Changed Tag: Text Brand Green and Border Brand Green */}
+          <span className="px-5 py-1.5 mb-4 text-sm font-semibold !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 rounded-full">
             Our Difference
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-main-black mb-4">
@@ -28,21 +29,24 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           
           {/* 1. ACE Digital (The Winner Card) */}
-          <div data-aos="fade-up" className="relative bg-white rounded-[30px] p-8 shadow-xl border-2 border-purple transform lg:-translate-y-4 z-20">
-            {/* Top Badge */}
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-md whitespace-nowrap">
+          {/* Updated Border Color to Brand Green and added Glow Effect */}
+          <div data-aos="fade-up" className="relative bg-white rounded-[30px] p-8 shadow-[0_0_30px_rgba(109,179,5,0.15)] border-2 border-[#6db305] transform lg:-translate-y-4 z-20 transition-all duration-300 hover:shadow-[0_0_40px_rgba(109,179,5,0.25)]">
+            
+            {/* Top Badge - Updated to Brand Blue Background */}
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#094a66] text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-md whitespace-nowrap">
               Highly Recommended
             </div>
 
             {/* Card Header (Logo & Title) */}
             <div className="flex items-center gap-4 mb-8 pb-6 border-b border-[#e7e3fa]">
-              <img src="/assets/images/ace-logo.svg" alt="ACE Digital" className="h-[200px] w-auto object-contain" />
+              <img src="/assets/images/ace-logo.svg" alt="ACE Digital" className="h-[100px] w-auto object-contain" />
             </div>
 
             {/* Features List */}
             <ul className="space-y-5 mb-8">
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-purple/10 flex items-center justify-center text-purple shrink-0 mt-0.5">
+                {/* Updated Icon Background and Text Color to Brand Green */}
+                <span className="w-6 h-6 rounded-full bg-[#6db305]/15 flex items-center justify-center text-[#6db305] shrink-0 mt-0.5">
                   <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
                 </span>
                 <div>
@@ -51,7 +55,7 @@ export default function WhyChooseUs() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-purple/10 flex items-center justify-center text-purple shrink-0 mt-0.5">
+                <span className="w-6 h-6 rounded-full bg-[#6db305]/15 flex items-center justify-center text-[#6db305] shrink-0 mt-0.5">
                   <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
                 </span>
                 <div>
@@ -60,7 +64,7 @@ export default function WhyChooseUs() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-purple/10 flex items-center justify-center text-purple shrink-0 mt-0.5">
+                <span className="w-6 h-6 rounded-full bg-[#6db305]/15 flex items-center justify-center text-[#6db305] shrink-0 mt-0.5">
                   <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
                 </span>
                 <div>
@@ -69,7 +73,7 @@ export default function WhyChooseUs() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-purple/10 flex items-center justify-center text-purple shrink-0 mt-0.5">
+                <span className="w-6 h-6 rounded-full bg-[#6db305]/15 flex items-center justify-center text-[#6db305] shrink-0 mt-0.5">
                   <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
                 </span>
                 <div>
@@ -79,16 +83,16 @@ export default function WhyChooseUs() {
               </li>
             </ul>
 
-            {/* Bonus Section */}
-            <div className="bg-[#f4f7ff] rounded-xl p-5 border border-[#c2d6ff]">
-              <h4 className="text-main-black font-bold mb-3 flex items-center gap-2">
-                <svg width="18" height="18" fill="none" stroke="#794AFF" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            {/* Bonus Section - Updated to Brand Blue transparent background */}
+            <div className="bg-[#094a66]/5 rounded-xl p-5 border border-[#094a66]/20">
+              <h4 className="text-[#094a66] font-bold mb-3 flex items-center gap-2">
+                <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 Bonus Benefits
               </h4>
-              <ul className="space-y-2 text-sm text-paragraph">
-                <li className="flex items-center gap-2"><span className="text-purple">✔</span> Free Digital Strategy Audit</li>
-                <li className="flex items-center gap-2"><span className="text-purple">✔</span> Dedicated Account Manager</li>
-                <li className="flex items-center gap-2"><span className="text-purple">✔</span> No surprise costs</li>
+              <ul className="space-y-2 text-sm text-main-black">
+                <li className="flex items-center gap-2"><span className="text-[#6db305] font-bold">✔</span> Free Digital Strategy Audit</li>
+                <li className="flex items-center gap-2"><span className="text-[#6db305] font-bold">✔</span> Dedicated Account Manager</li>
+                <li className="flex items-center gap-2"><span className="text-[#6db305] font-bold">✔</span> No surprise costs</li>
               </ul>
             </div>
           </div>

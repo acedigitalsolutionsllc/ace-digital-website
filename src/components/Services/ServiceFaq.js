@@ -42,18 +42,20 @@ export default function FaqOne() {
     <section className="relative pt-[80px] md:pt-[130px]" id="faq">
       <div className="w-full pb-16 md:pb-[130px] relative z-10">
         <div className="mx-auto theme-container">
-          <div className="relative flex items-center justify-center px-4 py-10 overflow-hidden border md:px-0 md:py-20 rounded-3xl border-purple/20 bg-main-gray">
+          {/* Main Wrapper Border changed to Brand Blue tint */}
+          <div className="relative flex items-center justify-center px-4 py-10 overflow-hidden border md:px-0 md:py-20 rounded-3xl border-[#094a66]/20 bg-main-gray">
             
-            {/* */}
+            {/* Animated Circles - Colors changed to Brand Green tint */}
             <div className="absolute flex items-center justify-center w-2 h-2 -bottom-1 -right-1">
-              <div className="animated_circle bg-purple/10"></div>
-              <div className="animated_circle2 bg-purple/10"></div>
-              <div className="animated_circle3 bg-purple/10"></div>
-              <div className="animated_circle4 bg-purple/10"></div>
+              <div className="animated_circle bg-[#6db305]/10"></div>
+              <div className="animated_circle2 bg-[#6db305]/10"></div>
+              <div className="animated_circle3 bg-[#6db305]/10"></div>
+              <div className="animated_circle4 bg-[#6db305]/10"></div>
             </div>
 
             <div className="max-w-[850px] w-full flex justify-center items-center flex-col relative z-10">
-              <h1 className="py-1 px-5 bg-white border-purple/20 border rounded-full font-semibold text-purple text-xs uppercase tracking-widest">
+              {/* FIXED: Section Tag with requested Brand Green and Important flag */}
+              <h1 className="py-1.5 px-5 mb-4 text-xs font-semibold !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 rounded-full uppercase tracking-widest shadow-[0_0_10px_rgba(109,179,5,0.1)]">
                 FAQs
               </h1>
               <h2 className="mt-5 font-bold text-24 sm:text-48 text-main-black font-montserrat text-center">
@@ -61,22 +63,24 @@ export default function FaqOne() {
               </h2>
               
               <div className="flex flex-col gap-3 w-full mt-8 md:mt-12 p-0 sm:p-5">
-                {/* */}
                 {faqs.map((faq, index) => (
                   <div
                     key={index}
-                    className={`py-4 md:py-5 px-5 md:px-9 w-full bg-white rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer border border-slate-100 hover:border-purple/30 ${
-                      activeFAQ === index ? "shadow-md" : "shadow-sm"
+                    // Hover and Active states changed to Brand Green with Glow
+                    className={`py-4 md:py-5 px-5 md:px-9 w-full bg-white rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer border border-slate-100 hover:border-[#6db305]/40 ${
+                      activeFAQ === index ? "shadow-[0_0_20px_rgba(109,179,5,0.12)] border-[#6db305]/30" : "shadow-sm"
                     }`}
                     onClick={() => toggleFAQ(index)}
                   >
                     <div className="flex items-center justify-between w-full h-fit">
-                      <h1 className={`font-bold sm:text-lg transition-colors duration-300 pr-4 ${activeFAQ === index ? "text-purple" : "text-main-black"}`}>
+                      {/* Active Text color changed to Brand Blue */}
+                      <h1 className={`font-bold sm:text-lg transition-colors duration-300 pr-4 ${activeFAQ === index ? "text-[#094a66]" : "text-main-black"}`}>
                         {faq.question}
                       </h1>
                       <div className="flex-shrink-0 ml-4">
                         <svg
-                          className={`w-4 h-4 transition-transform duration-300 ${activeFAQ === index ? "rotate-180 text-purple" : "text-main-black"}`}
+                          // Arrow icon colors changed to Brand Green
+                          className={`w-4 h-4 transition-transform duration-300 ${activeFAQ === index ? "rotate-180 text-[#6db305]" : "text-main-black"}`}
                           viewBox="0 0 19 10"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +96,7 @@ export default function FaqOne() {
                       </div>
                     </div>
                     
-                    {/* FAQ Answer with smooth drop transition */}
+                    {/* FAQ Answer Area */}
                     <div className={`transition-all duration-500 ease-in-out overflow-hidden ${activeFAQ === index ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"}`}>
                       <p className="text-paragraph text-base leading-relaxed pr-4">
                         {faq.answer}
@@ -100,14 +104,13 @@ export default function FaqOne() {
                     </div>
                   </div>
                 ))}
-                {/* */}
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Lottie Animations */}
+      {/* Lottie Animations Background */}
       <div className="absolute flex justify-between top-40 w-full pointer-events-none opacity-30 z-0">
         <Lottie animationData={lineAnimation} loop={true} className="w-[300px]" />
         <Lottie

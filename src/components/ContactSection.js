@@ -9,7 +9,7 @@ export default function ContactSection() {
     e.preventDefault();
     setStatus("sending");
 
-    // ⚠️ আপনার দেওয়া পুরোনো কোড থেকে নেওয়া EmailJS এর তথ্য
+    // ⚠️ আপনার দেওয়া পুরোনো কোড থেকে নেওয়া EmailJS এর তথ্য
     emailjs
       .sendForm(
         "service_pgb2duk",   // Service ID
@@ -35,7 +35,8 @@ export default function ContactSection() {
       <div className="mx-auto theme-container">
         {/* --- Header Section --- */}
         <div className="flex flex-col items-center mb-12 text-center">
-          <span className="px-5 py-1.5 mb-4 text-sm font-medium text-purple bg-purple/10 border border-purple/20 rounded-full">
+          {/* Changed Tag: Text Brand Green and Border Brand Green with Glow format */}
+          <span className="px-5 py-1.5 mb-4 text-sm font-medium !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 rounded-full">
             Contact Us
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-main-black mb-4">
@@ -50,46 +51,50 @@ export default function ContactSection() {
           
           {/* --- Left Side: Contact Info Cards --- */}
           <div className="lg:col-span-5 flex flex-col gap-5">
-            {/* Email Card */}
-            <div data-aos="fade-up" className="bg-white p-6 rounded-[24px] flex items-center justify-between shadow-sm border border-[#e7e3fa] hover:shadow-md transition-shadow">
+            {/* Email Card - Hover Glow applied */}
+            <div data-aos="fade-up" className="bg-white p-6 rounded-[24px] flex items-center justify-between shadow-sm border border-[#e7e3fa] hover:border-[#094a66] hover:shadow-[0_0_20px_rgba(9,74,102,0.15)] transition-all duration-300 group">
               <div>
-                <h3 className="text-xl font-bold text-main-black mb-1">Email Us</h3>
+                <h3 className="text-xl font-bold text-main-black mb-1 group-hover:text-[#094a66] transition-colors">Email Us</h3>
                 <p className="text-paragraph">joseph@aceavatars.com</p>
               </div>
-              <div className="w-[50px] h-[50px] rounded-full bg-purple/10 flex items-center justify-center text-purple">
+              {/* Icon color changed to Brand Blue */}
+              <div className="w-[50px] h-[50px] rounded-full bg-[#094a66]/10 flex items-center justify-center text-[#094a66] group-hover:bg-[#094a66] group-hover:text-white transition-colors">
                 <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
               </div>
             </div>
 
-            {/* Phone Card */}
-            <div data-aos="fade-up" data-aos-delay="100" className="bg-white p-6 rounded-[24px] flex items-center justify-between shadow-sm border border-[#e7e3fa] hover:shadow-md transition-shadow">
+            {/* Phone Card - Hover Glow applied */}
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-white p-6 rounded-[24px] flex items-center justify-between shadow-sm border border-[#e7e3fa] hover:border-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.15)] transition-all duration-300 group">
               <div>
-                <h3 className="text-xl font-bold text-main-black mb-1">Call Us</h3>
+                <h3 className="text-xl font-bold text-main-black mb-1 group-hover:text-[#6db305] transition-colors">Call Us</h3>
                 <p className="text-paragraph">(725) 222-3947</p>
               </div>
-              <div className="w-[50px] h-[50px] rounded-full bg-[#128C7E]/10 flex items-center justify-center text-[#128C7E]">
+              {/* Icon color changed to Brand Green */}
+              <div className="w-[50px] h-[50px] rounded-full bg-[#6db305]/10 flex items-center justify-center text-[#6db305] group-hover:bg-[#6db305] group-hover:text-white transition-colors">
                 <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
               </div>
             </div>
 
-            {/* Services Card */}
-            <div data-aos="fade-up" data-aos-delay="200" className="bg-white p-6 rounded-[24px] flex items-center justify-between shadow-sm border border-[#e7e3fa] hover:shadow-md transition-shadow">
+            {/* Services Card - Hover Glow applied */}
+            <div data-aos="fade-up" data-aos-delay="200" className="bg-white p-6 rounded-[24px] flex items-center justify-between shadow-sm border border-[#e7e3fa] hover:border-[#094a66] hover:shadow-[0_0_20px_rgba(9,74,102,0.15)] transition-all duration-300 group">
               <div>
-                <h3 className="text-xl font-bold text-main-black mb-1">Our Services</h3>
+                <h3 className="text-xl font-bold text-main-black mb-1 group-hover:text-[#094a66] transition-colors">Our Services</h3>
                 <p className="text-paragraph">AI Clones & CGI Advertising</p>
               </div>
-              <div className="w-[50px] h-[50px] rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
+              {/* Icon color changed to Brand Blue */}
+              <div className="w-[50px] h-[50px] rounded-full bg-[#094a66]/10 flex items-center justify-center text-[#094a66] group-hover:bg-[#094a66] group-hover:text-white transition-colors">
                 <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
               </div>
             </div>
 
-            {/* Location Card */}
-            <div data-aos="fade-up" data-aos-delay="300" className="bg-white p-6 rounded-[24px] flex items-center justify-between shadow-sm border border-[#e7e3fa] hover:shadow-md transition-shadow">
+            {/* Location Card - Hover Glow applied */}
+            <div data-aos="fade-up" data-aos-delay="300" className="bg-white p-6 rounded-[24px] flex items-center justify-between shadow-sm border border-[#e7e3fa] hover:border-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.15)] transition-all duration-300 group">
               <div>
-                <h3 className="text-xl font-bold text-main-black mb-1">Visit Us</h3>
+                <h3 className="text-xl font-bold text-main-black mb-1 group-hover:text-[#6db305] transition-colors">Visit Us</h3>
                 <p className="text-paragraph">Las Vegas, Nevada</p>
               </div>
-              <div className="w-[50px] h-[50px] rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500">
+              {/* Icon color changed to Brand Green */}
+              <div className="w-[50px] h-[50px] rounded-full bg-[#6db305]/10 flex items-center justify-center text-[#6db305] group-hover:bg-[#6db305] group-hover:text-white transition-colors">
                 <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
               </div>
             </div>
@@ -102,33 +107,36 @@ export default function ContactSection() {
               {/* Full Name */}
               <div>
                 <label className="block text-sm font-bold text-main-black mb-2">Full Name</label>
+                {/* Added Brand Green Glow on Focus */}
                 <input 
                   type="text" 
-                  name="user_name" // EmailJS Template এর ভ্যালুর সাথে মিল থাকতে হবে
+                  name="user_name" 
                   placeholder="John Doe" 
                   required
-                  className="w-full h-[55px] px-5 bg-main-gray border border-transparent focus:border-purple rounded-xl outline-none transition-all placeholder:text-gray-400 text-main-black"
+                  className="w-full h-[55px] px-5 bg-main-gray border border-transparent focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all placeholder:text-gray-400 text-main-black"
                 />
               </div>
 
               {/* Email */}
               <div>
                 <label className="block text-sm font-bold text-main-black mb-2">Email Address</label>
+                {/* Added Brand Green Glow on Focus */}
                 <input 
                   type="email" 
-                  name="user_email" // EmailJS Template এর ভ্যালুর সাথে মিল থাকতে হবে
+                  name="user_email" 
                   placeholder="john48@gmail.com" 
                   required
-                  className="w-full h-[55px] px-5 bg-main-gray border border-transparent focus:border-purple rounded-xl outline-none transition-all placeholder:text-gray-400 text-main-black"
+                  className="w-full h-[55px] px-5 bg-main-gray border border-transparent focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all placeholder:text-gray-400 text-main-black"
                 />
               </div>
 
               {/* Service Selection */}
               <div>
                 <label className="block text-sm font-bold text-main-black mb-2">Interested In</label>
+                {/* Added Brand Green Glow on Focus */}
                 <select 
-                  name="interest" // আপনার আগের কোড অনুযায়ী এটি 'interest'
-                  className="w-full h-[55px] px-5 bg-main-gray border border-transparent focus:border-purple rounded-xl outline-none transition-all text-main-black appearance-none cursor-pointer"
+                  name="interest" 
+                  className="w-full h-[55px] px-5 bg-main-gray border border-transparent focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all text-main-black appearance-none cursor-pointer"
                   required
                 >
                   <option value="" disabled selected>Select a service...</option>
@@ -142,20 +150,22 @@ export default function ContactSection() {
               {/* Message */}
               <div>
                 <label className="block text-sm font-bold text-main-black mb-2">Your Message</label>
+                {/* Added Brand Green Glow on Focus */}
                 <textarea 
-                  name="message" // EmailJS Template এর ভ্যালুর সাথে মিল থাকতে হবে
+                  name="message" 
                   placeholder="I would like to know more about..." 
                   required
-                  className="w-full p-5 bg-main-gray border border-transparent focus:border-purple rounded-xl outline-none transition-all placeholder:text-gray-400 text-main-black resize-none min-h-[140px]"
+                  className="w-full p-5 bg-main-gray border border-transparent focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all placeholder:text-gray-400 text-main-black resize-none min-h-[140px]"
                 ></textarea>
               </div>
 
               {/* Submit Button & Status Messages */}
               <div className="mt-2">
+                {/* Button Base: Brand Blue. Hover: Brand Green + Glow */}
                 <button 
                   type="submit" 
                   disabled={status === "sending"}
-                  className="w-full py-4 bg-purple text-white font-bold text-lg rounded-xl hover:bg-main-black transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-[#094a66] text-white font-bold text-lg rounded-xl hover:bg-[#6db305] hover:shadow-[0_0_20px_rgba(109,179,5,0.4)] transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {status === "sending" ? (
                     <>
