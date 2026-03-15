@@ -92,7 +92,7 @@ Please reach out to the prospect ASAP!
         </div>
         <div className="mx-auto theme-container relative z-10 text-center max-w-4xl">
           {/* Changed Tag: Text Brand Green and Border Brand Green with Glow format */}
-          <div className="inline-block px-5 py-1.5 mb-4 text-sm font-semibold !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 rounded-full">
+          <div className="inline-block px-5 py-1.5 mb-4 text-sm font-semibold !text-[#6db305] !bg-[#6db305]/10 !border !border-[#6db305]/20 rounded-full shadow-[0_0_10px_rgba(109,179,5,0.15)]">
             ACE Partner Program
           </div>
           <h1 className="text-4xl md:text-[60px] font-bold text-main-black mb-6 leading-tight">
@@ -101,7 +101,7 @@ Please reach out to the prospect ASAP!
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#094a66] to-[#6db305]">Earn the Reward.</span>
           </h1>
           <p className="text-paragraph font-medium text-lg mb-4">
-            Refer a business owner to ACE Digital Solutions and enjoy exclusive savings on your monthly contract. Win-win for everyone!
+            Refer a business owner to ACE Digital Solutions and enjoy exclusive savings on your contract or earn cash rewards. Win-win for everyone!
           </p>
         </div>
       </section>
@@ -113,23 +113,39 @@ Please reach out to the prospect ASAP!
 
         <div className="mx-auto theme-container max-w-6xl relative z-10">
           
-          {/* Rewards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[80px]">
-            {/* Card 1: Hover changed to Brand Green with Glow */}
-            <div data-aos="fade-up" className="bg-white border-2 border-[#e7e3fa] hover:border-[#6db305] rounded-[30px] p-10 text-center shadow-sm hover:shadow-[0_10px_30px_rgba(109,179,5,0.15)] transition-all duration-300 transform hover:-translate-y-2">
-              <div className="text-5xl font-black text-main-black mb-2">15% <span className="text-2xl text-[#6db305]">OFF</span></div>
-              <h3 className="text-xl font-bold text-main-black mb-2">Monthly Contract</h3>
-              <p className="text-paragraph font-medium">For 1 Successful Referral</p>
+          {/* 4 Rewards Grid Updated based on Joe's Draft */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-[80px]">
+            
+            {/* Reward 1 */}
+            <div data-aos="fade-up" data-aos-delay="0" className="bg-white border-2 border-[#e7e3fa] hover:border-[#6db305] rounded-[30px] p-8 text-center shadow-sm hover:shadow-[0_10px_30px_rgba(109,179,5,0.15)] transition-all duration-300 transform hover:-translate-y-2">
+              <div className="text-4xl font-black text-main-black mb-2">15% <span className="text-xl text-[#6db305]">OFF</span></div>
+              <h3 className="text-lg font-bold text-[#094a66] mb-2">Your Own Bill</h3>
+              <p className="text-paragraph text-sm font-medium">For bringing a client with a <strong>$500+</strong> monthly contract.</p>
             </div>
             
-            {/* Card 2: Background changed to Brand Blue */}
-            <div data-aos="fade-up" data-aos-delay="100" className="bg-[#094a66] rounded-[30px] p-10 text-center shadow-[0_10px_30px_rgba(9,74,102,0.3)] transform hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-full bg-white/5 pointer-events-none"></div>
-              {/* OFF Text changed to Brand Green with inner text glow */}
-              <div className="text-5xl font-black text-white mb-2 relative z-10">20% <span className="text-2xl text-[#6db305] drop-shadow-[0_0_8px_rgba(109,179,5,0.8)]">OFF</span></div>
-              <h3 className="text-xl font-bold text-white mb-2 relative z-10">Monthly Contract</h3>
-              <p className="text-white/80 font-medium relative z-10">For 3+ Successful Referrals</p>
+            {/* Reward 2 */}
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-white border-2 border-[#e7e3fa] hover:border-[#6db305] rounded-[30px] p-8 text-center shadow-sm hover:shadow-[0_10px_30px_rgba(109,179,5,0.15)] transition-all duration-300 transform hover:-translate-y-2">
+              <div className="text-4xl font-black text-main-black mb-2">10% <span className="text-xl text-[#6db305]">OFF</span></div>
+              <h3 className="text-lg font-bold text-[#094a66] mb-2">Your Own Bill</h3>
+              <p className="text-paragraph text-sm font-medium">For bringing a client with a <strong>$299-$499</strong> monthly contract.</p>
             </div>
+
+            {/* Reward 3 */}
+            <div data-aos="fade-up" data-aos-delay="200" className="bg-white border-2 border-[#e7e3fa] hover:border-[#6db305] rounded-[30px] p-8 text-center shadow-sm hover:shadow-[0_10px_30px_rgba(109,179,5,0.15)] transition-all duration-300 transform hover:-translate-y-2">
+              <div className="text-4xl font-black text-main-black mb-2">15% <span className="text-xl text-[#6db305]">REWARD</span></div>
+              <h3 className="text-lg font-bold text-[#094a66] mb-2">Cash or Discount</h3>
+              <p className="text-paragraph text-sm font-medium">For bringing a one-time setup fee between <strong>$500-$999</strong>.</p>
+            </div>
+            
+            {/* Reward 4 - VIP Background changed to Brand Blue */}
+            <div data-aos="fade-up" data-aos-delay="300" className="bg-[#094a66] rounded-[30px] p-8 text-center shadow-[0_10px_30px_rgba(9,74,102,0.3)] transform hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-full h-full bg-white/5 pointer-events-none"></div>
+              {/* OFF Text changed to Brand Green with inner text glow on hover */}
+              <div className="text-4xl font-black text-white mb-2 relative z-10 group-hover:drop-shadow-[0_0_10px_rgba(109,179,5,0.8)] transition-all duration-300">20% <span className="text-xl text-[#6db305]">OFF</span></div>
+              <h3 className="text-lg font-bold text-white mb-2 relative z-10">VIP Reward</h3>
+              <p className="text-white/80 text-sm font-medium relative z-10">If you bring <strong>more than 3</strong> successful clients.</p>
+            </div>
+
           </div>
 
           {/* How It Works */}
@@ -154,8 +170,8 @@ Please reach out to the prospect ASAP!
                 <div className="hidden md:block absolute top-8 -left-1/4 w-1/2 h-[2px] bg-dashed border-t-2 border-[#094a66]/20"></div>
                 {/* Step 3 Glows with Brand Green */}
                 <div className="w-16 h-16 bg-[#6db305] text-white rounded-full flex items-center justify-center text-2xl font-black mb-4 shadow-[0_0_15px_rgba(109,179,5,0.5)] relative z-10">3</div>
-                <h4 className="text-lg font-bold text-main-black mb-2">You Save</h4>
-                <p className="text-paragraph text-sm">Once they sign a contract, your discount is applied instantly!</p>
+                <h4 className="text-lg font-bold text-main-black mb-2">You Earn</h4>
+                <p className="text-paragraph text-sm">Once they sign a contract, your discount or cash is applied instantly!</p>
               </div>
             </div>
           </div>
@@ -214,7 +230,6 @@ Please reach out to the prospect ASAP!
                   <div className="grid grid-cols-1 gap-6">
                     <div>
                       <label className="block text-sm font-bold text-main-black mb-2">Referral's Full Name *</label>
-                      {/* Added Brand Green Glow on Focus */}
                       <input type="text" name="referralName" value={formData.referralName} onChange={handleChange} required className="w-full h-[55px] px-5 bg-white border border-[#e7e3fa] focus:border-[#6db305] focus:shadow-[0_0_10px_rgba(109,179,5,0.2)] rounded-xl outline-none transition-all" placeholder="Jane Smith" />
                     </div>
                     <div>
@@ -237,8 +252,9 @@ Please reach out to the prospect ASAP!
                   {status === "sending" ? "Submitting..." : "Submit Referral"}
                 </button>
 
+                {/* Updated Terms and Conditions Note to match the new rewards */}
                 <p className="text-xs text-paragraph text-center mt-4 px-4">
-                  *Terms & Conditions: The referral discount applies when the referred client signs a contract of $500 or more per month for a minimum term of 6 months. Discounts will be formally documented in a written agreement between ACE Digital Solutions, LLC and you.
+                  *Terms & Conditions: Referral discounts or cash rewards apply once the referred client successfully signs their contract and completes their initial payment. Discounts will be formally documented in a written agreement between ACE Digital Solutions, LLC and you.
                 </p>
 
               </form>
